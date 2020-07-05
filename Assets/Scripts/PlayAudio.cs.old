@@ -1,0 +1,109 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+using System.IO;
+using System;
+
+[RequireComponent(typeof(AudioSource))]
+public class PlayAudio : MonoBehaviour
+{
+  
+    //public bool change=false;
+    AudioSource audiosource;
+    public enum stage {Start,Dharug,English,None};
+      public stage level=stage.Start;
+    public Text text;
+    public int Fileno = 0;
+    public AudioClip[] listAudio;
+    public string[] dharug;
+    public string[] translations;
+    public bool play = false;
+   Material skyBox, oldSkyBox;
+    // new Camera camera;
+    AudioClip audioclip;
+  GameObject clouds;
+    
+    private IEnumerator coroutine;
+   // PDPortSend pdsend;
+    // Start is called before the first frame update
+    void Start()
+    {
+        // Fileno = 0;
+        play = true;
+       clouds = GameObject.FindWithTag("Clouds");
+       // oldSkyBox = camera.GetComponent<Skybox>().material;
+      //change = false;
+        if (level == stage.English) level = stage.None;
+        if (level == stage.Dharug)level = stage.English;
+        if (level == stage.Start) level = stage.Dharug;
+        audiosource = transform.GetComponent<AudioSource>();
+        Text [] texts = FindObjectsOfType<Text>();
+        //  text= canvas.GetComponent<Text>();
+       // Debug.Log(texts);
+        text = texts[0];
+        //pdsend=GetComponent<PDPortSend>();
+        clouds.SetActive(false);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+      
+        StartCoroutine(RunAudio());
+        
+    }
+    public static void WaitAudio()
+    {
+        DateTime ts = DateTime.Now + TimeSpan.FromSeconds(5);
+
+        do { } while (DateTime.Now < ts);
+    }
+    IEnumerator RunAudio()
+    {
+
+        while (Fileno < 12)
+        {
+            
+            if (!audiosource.isPlaying & play)
+            {
+     
+                audiosource.clip = listAudio[Fileno];
+
+                //               pdsend.sendMessagePD("2 2");
+                audiosource.PlayDelayed(5f);
+                //           pdsend.sendMessagePD("2 1");
+                // Debug.Log(level + " " + Fileno);
+                yield return new WaitForSeconds(5f);
+
+                if (level == stage.Dharug) text.text = dharug[Fileno ];
+                else if (level == stage.English) text.text = translations[Fileno ];
+                else text.text = "";
+
+                Fileno += 1;
+
+
+                if (Fileno == 7)
+                {
+
+                    // camera.GetComponent<Skybox>().material = skyBox;
+                    clouds.SetActive(true);
+                }
+                if (Fileno == 10)
+                {
+
+                    //camera.GetComponent<Skybox>().material = oldSkyBox;
+                    clouds.SetActive(false);
+                }
+                yield return new WaitUntil(() => !audiosource.isPlaying);
+                
+            }
+            
+
+
+
+        }
+    }
+    }
+
+

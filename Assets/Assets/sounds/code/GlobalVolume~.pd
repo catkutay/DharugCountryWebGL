@@ -1,0 +1,8 @@
+#N canvas -8 -8 1366 725 10;
+#X obj 66 56 inlet~;
+#X obj 67 104 *~;
+#X obj 67 170 outlet~;
+#X obj 132 74 r global-volume;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 3 0 1 1;

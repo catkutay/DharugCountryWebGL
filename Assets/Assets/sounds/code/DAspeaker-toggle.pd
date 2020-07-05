@@ -1,0 +1,118 @@
+#N canvas -8 -8 1362 721 10;
+#X obj 6 9 tgl 15 0 \$1-pos1 \$1-rpos1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 26 9 tgl 15 0 \$1-pos2 \$1-rpos2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 46 9 tgl 15 0 \$1-pos3 \$1-rpos3 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 66 9 tgl 15 0 \$1-pos4 \$1-rpos4 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 87 9 tgl 15 0 \$1-pos5 \$1-rpos5 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 107 9 tgl 15 0 \$1-pos6 \$1-rpos6 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 127 9 tgl 15 0 \$1-pos7 \$1-rpos7 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 156 9 tgl 15 0 \$1-pos8 \$1-rpos8 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 176 9 tgl 15 0 \$1-pos9 \$1-rpos9 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 196 9 tgl 15 0 \$1-pos10 \$1-rpos10 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 216 9 tgl 15 0 \$1-pos11 \$1-rpos11 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 237 9 tgl 15 0 \$1-pos12 \$1-rpos12 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 257 9 tgl 15 0 \$1-pos13 \$1-rpos13 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 277 9 tgl 15 0 \$1-pos14 \$1-rpos14 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 819 581 r \$1-pos13;
+#X obj 74 863 DAoutput~, f 157;
+#X obj 73 665 cpuamp-fade~ 40;
+#X obj 294 767 cpuamp-fade~ 40;
+#X obj 119 694 cpuamp-fade~ 40;
+#X obj 153 733 cpuamp-fade~ 40;
+#X obj 200 754 cpuamp-fade~ 40;
+#X obj 240 634 cpuamp-fade~ 40;
+#X obj 277 658 cpuamp-fade~ 40;
+#X obj 350 698 cpuamp-fade~ 40;
+#X obj 456 721 cpuamp-fade~ 40;
+#X obj 532 739 cpuamp-fade~ 40;
+#X obj 631 725 cpuamp-fade~ 40;
+#X obj 703 756 cpuamp-fade~ 40;
+#X obj 782 795 cpuamp-fade~ 40;
+#X obj 884 786 cpuamp-fade~ 40;
+#X floatatom 299 10 5 1 9999 1 FADE_MS - #1-smooth-time, f 5;
+#X obj 741 640 r \$1-smooth-time;
+#X obj 937 609 r \$1-pos14;
+#X obj 143 477 r \$1-pos1;
+#X obj 164 508 r \$1-pos2;
+#X obj 190 547 r \$1-pos3;
+#X obj 211 578 r \$1-pos4;
+#X obj 246 477 r \$1-pos5;
+#X obj 267 509 r \$1-pos6;
+#X obj 294 547 r \$1-pos7;
+#X obj 314 578 r \$1-pos8;
+#X obj 490 504 r \$1-pos9;
+#X obj 558 503 r \$1-pos10;
+#X obj 639 506 r \$1-pos11;
+#X obj 728 521 r \$1-pos12;
+#X obj 73 581 inlet~;
+#X connect 14 0 28 1;
+#X connect 16 0 15 0;
+#X connect 17 0 15 4;
+#X connect 18 0 15 1;
+#X connect 19 0 15 2;
+#X connect 20 0 15 3;
+#X connect 21 0 15 5;
+#X connect 22 0 15 6;
+#X connect 23 0 15 7;
+#X connect 24 0 15 8;
+#X connect 25 0 15 9;
+#X connect 26 0 15 10;
+#X connect 27 0 15 11;
+#X connect 28 0 15 12;
+#X connect 29 0 15 13;
+#X connect 31 0 29 2;
+#X connect 31 0 28 2;
+#X connect 31 0 27 2;
+#X connect 31 0 26 2;
+#X connect 31 0 25 2;
+#X connect 31 0 24 2;
+#X connect 31 0 23 2;
+#X connect 31 0 22 2;
+#X connect 31 0 21 2;
+#X connect 31 0 17 2;
+#X connect 31 0 20 2;
+#X connect 31 0 19 2;
+#X connect 31 0 18 2;
+#X connect 31 0 16 2;
+#X connect 32 0 29 1;
+#X connect 33 0 16 1;
+#X connect 34 0 18 1;
+#X connect 35 0 19 1;
+#X connect 36 0 20 1;
+#X connect 37 0 17 1;
+#X connect 38 0 21 1;
+#X connect 39 0 22 1;
+#X connect 40 0 23 1;
+#X connect 41 0 24 1;
+#X connect 42 0 25 1;
+#X connect 43 0 26 1;
+#X connect 44 0 27 1;
+#X connect 45 0 16 0;
+#X connect 45 0 18 0;
+#X connect 45 0 19 0;
+#X connect 45 0 20 0;
+#X connect 45 0 17 0;
+#X connect 45 0 21 0;
+#X connect 45 0 22 0;
+#X connect 45 0 23 0;
+#X connect 45 0 24 0;
+#X connect 45 0 25 0;
+#X connect 45 0 26 0;
+#X connect 45 0 27 0;
+#X connect 45 0 28 0;
+#X connect 45 0 29 0;
+#X coords 0 -1 1 1 410 35 2 0 0;

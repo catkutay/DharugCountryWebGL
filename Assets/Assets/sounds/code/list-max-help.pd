@@ -1,0 +1,29 @@
+#N canvas 95 193 564 347 10;
+#X floatatom 42 183 5 0 0 0 - - -;
+#X floatatom 87 155 5 0 0 0 - - -;
+#X obj 24 26 cnv 4 520 4 empty empty list-max 20 -10 0 12 -66577 -66577
+0;
+#X obj 439 237 cnv 15 100 30 empty empty dependencies: 8 8 0 10 -233148
+-71069 0;
+#X text 445 249 none;
+#X text 263 102 INLETS:;
+#X text 263 160 OUTLETS:;
+#X text 263 62 PARAMETERS:;
+#X text 273 76 none;
+#X obj 42 122 list-max;
+#X text 40 235 based on abstraction by sebfumaster;
+#X text 82 182 max value;
+#X text 124 154 max position;
+#X text 200 6 return maximum value and position of input list;
+#X msg 41 90 4 2 72 2 120 -33 10 1;
+#X text 40 249 http://puredata.hurleur.com/viewtopic.php?pid=41038#p41038
+;
+#X text 273 116 1 = list;
+#X text 273 174 1 = maximum value;
+#X text 273 188 2 = maximum position;
+#X text 78 43 max item's;
+#X text 78 54 position = 4;
+#X text 98 68 |;
+#X connect 9 0 0 0;
+#X connect 9 1 1 0;
+#X connect 14 0 9 0;

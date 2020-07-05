@@ -1,0 +1,46 @@
+#N canvas -8 -8 1362 721 10;
+#X obj 6 9 tgl 15 0 \$1-pos1 \$1-rpos1 empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj 26 9 tgl 15 0 \$1-pos2 \$1-rpos2 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 46 9 tgl 15 0 \$1-pos3 \$1-rpos3 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 66 9 tgl 15 0 \$1-pos4 \$1-rpos4 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 87 9 tgl 15 0 \$1-pos5 \$1-rpos5 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 107 9 tgl 15 0 \$1-pos6 \$1-rpos6 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 127 9 tgl 15 0 \$1-pos7 \$1-rpos7 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 156 9 tgl 15 0 \$1-pos8 \$1-rpos8 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 176 9 tgl 15 0 \$1-pos9 \$1-rpos9 empty 17 7 0 10 -262144 -1
+-1 0 1;
+#X obj 196 9 tgl 15 0 \$1-pos10 \$1-rpos10 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 216 9 tgl 15 0 \$1-pos11 \$1-rpos11 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 237 9 tgl 15 0 \$1-pos12 \$1-rpos12 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 257 9 tgl 15 0 \$1-pos13 \$1-rpos13 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X obj 277 9 tgl 15 0 \$1-pos14 \$1-rpos14 empty 17 7 0 10 -262144
+-1 -1 0 1;
+#X floatatom 299 10 5 1 9999 1 FADE_MS - #1-smooth-time, f 5;
+#X obj 31 253 DAspeaker-select~;
+#X msg 81 126 1 5 9 13;
+#X msg 91 153 3 7 11 15;
+#X msg 129 217 100;
+#X msg 124 197 2000;
+#X msg 102 173 1 2;
+#X msg 157 167 0;
+#X obj 30 73 inlet~;
+#X connect 16 0 15 1;
+#X connect 17 0 15 1;
+#X connect 18 0 15 2;
+#X connect 19 0 15 2;
+#X connect 20 0 15 1;
+#X connect 21 0 15 1;
+#X connect 22 0 15 0;
+#X coords 0 -1 1 1 410 35 2 0 0;

@@ -1,0 +1,24 @@
+#N canvas 398 262 1362 652 10;
+#X obj 118 18 hsl 100 15 0.5 4 0 0 \$1-focus \$1-set-focus Focus -2
+-8 0 10 -262144 -1 -1 4243 1;
+#X obj 47 242 DA-angle~, f 29;
+#X obj 48 121 inlet~;
+#X obj 218 199 pow 2;
+#X obj 218 163 r \$1-focus;
+#X obj 132 165 r \$1-deg;
+#X obj 9 18 hsl 100 15 0 355 0 0 \$1-deg \$1-set-deg Degrees -2 -8
+0 10 -262144 -1 -1 0 1;
+#X obj 48 369 s \$1-set-deg;
+#X obj 156 368 s \$1-set-focus;
+#X msg 48 328 0;
+#X msg 156 336 2;
+#X obj 48 271 loadbang;
+#X connect 2 0 1 0;
+#X connect 3 0 1 2;
+#X connect 4 0 3 0;
+#X connect 5 0 1 1;
+#X connect 9 0 7 0;
+#X connect 10 0 8 0;
+#X connect 11 0 9 0;
+#X connect 11 0 10 0;
+#X coords 0 -1 1 1 240 40 2 0 0;
