@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
-using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(AudioSource))]
 public class PlayAudio : MonoBehaviour
@@ -12,7 +11,7 @@ public class PlayAudio : MonoBehaviour
     
     public AudioSource audiosource;
     public enum stage {Start,Dharug,English,None};
-    public stage level;
+      public stage level=stage.Start;
      public int Fileno = 0;
     public AudioClip[] listAudio;
     public string[] dharug;
@@ -31,27 +30,11 @@ public class PlayAudio : MonoBehaviour
         play = true;
         next = true;
         Fileno = 0;
-        //clouds = GameObject.FindWithTag("clouds");
-        try
-        {
-            level = (stage)System.Enum.Parse(typeof(stage), PlayerPrefs.GetString("StoredStage"));
-        }
-        catch 
-        {
-           // PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
-            level = stage.Start;
-        }
-        //not sure why need this
-        if (level == stage.English) level = stage.Start;
-
-
-        if (level == stage.Dharug) level = stage.English;
-        if (level == stage.None) level = stage.Dharug;
-        if (level == stage.Start) level = stage.None;
-        //level = stage.None;
-        PlayerPrefs.SetString("StoredStage", level.ToString());
-
-
+       //clouds = GameObject.FindWithTag("clouds");
+       
+        if (level == stage.English) level = stage.None;
+        if (level == stage.Dharug)level = stage.English;
+        if (level == stage.Start) level = stage.Dharug;
         audiosource = transform.GetComponent<AudioSource>();
         Text [] texts = FindObjectsOfType<Text>();
         //  text= canvas.GetComponent<Text>();
@@ -66,24 +49,14 @@ public class PlayAudio : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             next = true;
-            //revert to saved
-            level = (stage)System.Enum.Parse(typeof(stage), PlayerPrefs.GetString("StoredStage"));
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
             Fileno -= 1;
             next = true;
-            //update stage
-            if (level == stage.Dharug) level = stage.English;
-            if (level == stage.None) level = stage.Dharug;
-            if (level == stage.Start) level = stage.None;
-        }
-        else if (Input.GetKeyDown(KeyCode.N))
-        {
-            SceneManager.LoadScene("2DScene");
         }
 
-            StartCoroutine(RunAudio());
+        StartCoroutine(RunAudio());
         
     }
   

@@ -318,11 +318,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d10f80fd16878174faae3168da36e1c1, type: 3}
   dharug:
   - 
-  - ' Ngaya Badagarang'
-  - ' Ngyina nangyilaburgay-ga Iyura-wa'
-  - ' Iyura gawi wara Jillung, byalla-ra nura'
-  - ' Jillung byalla waru wulbung nura-wa'
-  - ' Iyura-wa gawi-da'
+  - Ngaya Badagarang
+  - Ngyina nangyilaburgay-ga Iyura-wa
+  - Iyura gawi wara Jillung, byalla-ra nura
+  - Jillung byalla waru wulbung nura-wa
+  - Iyura-wa gawi-da
   - 
   translations:
   - 
@@ -342,14 +342,6 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 4eedb138b2d7240db8312950fe78ac96, type: 3}
   - {fileID: 32900000, guid: 70c5100d68a85436b9912f29a1e7762a, type: 3}
   - {fileID: 32900000, guid: e0b369614b6c64726ac8221cd54be257, type: 3}
-  listOfVideos:
-  - Kangaroo_Part1_ENTER_TRANSPARENT.mov.webm
-  - Kangaroo_Part2_IAAK_TRANSPARENT.mov.webm
-  - Kangaroo_Part3_IMTP_TRANSPARENT.mov.webm
-  - Kangaroo_Part4_PCFC_TRANSPARENT.mov.webm
-  - Kangaroo_Part5_TSHC_TRANSPARENT.mov.webm
-  - Kangaroo_Part6_PAC_TRANSPARENT.mov.webm
-  - Kangaroo_Part7_ENDLOOP_TRANSPARENT.mov.webm
 --- !u!82 &31361732
 AudioSource:
   m_ObjectHideFlags: 0
@@ -878,6 +870,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa06c3f4dc044e4db45ec2ab4ef0e7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  videoplayers:
+  - {fileID: 235156736}
+  - {fileID: 31361728}
+  - {fileID: 418855620}
+  - {fileID: 1393665961}
+  - {fileID: 2002289850}
+  - {fileID: 1557793968}
 --- !u!4 &137502984
 Transform:
   m_ObjectHideFlags: 0
@@ -1060,7 +1059,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_RenderingPath: -1
+  m_RenderingPath: 3
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -1120,7 +1119,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeTrigger: {fileID: 205380572}
   volumeLayer:
-    serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
@@ -1130,6 +1128,9 @@ MonoBehaviour:
     sharpness: 0.25
     stationaryBlending: 0.95
     motionBlending: 0.85
+    <jitter>k__BackingField: {x: 0, y: 0}
+    m_ResetHistory: 1
+    <sampleIndex>k__BackingField: 0
   subpixelMorphologicalAntialiasing:
     quality: 2
   fastApproximateAntialiasing:
@@ -1138,21 +1139,21 @@ MonoBehaviour:
   fog:
     enabled: 1
     excludeSkybox: 1
+  dithering:
+    m_NoiseTextureIndex: 0
   debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
+    lightMeter: {<output>k__BackingField: {fileID: 0}, requested: 0, width: 512, height: 256,
+      showCurves: 1}
+    histogram: {<output>k__BackingField: {fileID: 0}, requested: 0, width: 512, height: 256,
+      channel: 3}
+    waveform: {<output>k__BackingField: {fileID: 0}, requested: 0, exposure: 0.12,
+      height: 256}
+    vectorscope: {<output>k__BackingField: {fileID: 0}, requested: 0, size: 256, exposure: 0.12}
+    frameWidth: 0
+    frameHeight: 0
+    <debugOverlayTarget>k__BackingField: {fileID: 0}
+    <debugOverlayActive>k__BackingField: 0
+    <debugOverlay>k__BackingField: 0
     overlaySettings:
       linearDepth: 0
       motionColorIntensity: 4
@@ -1160,12 +1161,19 @@ MonoBehaviour:
       colorBlindnessType: 0
       colorBlindnessStrength: 1
   m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_OldResources: {fileID: 0}
   m_ShowToolkit: 0
   m_ShowCustomSorter: 0
   breakBeforeColorGrading: 0
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+  <cameraDepthFlags>k__BackingField: 0
+  <haveBundlesBeenInited>k__BackingField: 0
+  m_Camera: {fileID: 205380571}
+  m_SettingsUpdateNeeded: 1
+  m_IsRenderingInSceneView: 0
+  m_NaNKilled: 0
 --- !u!1 &229891040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1337,10 +1345,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a654a8bddaa284de68f46110abf16535, type: 3}
   dharug:
   - 
-  - ' Diya dah wingaru nura nunang la nung ngyina garriberri'
-  - ' Wawa nin garriberri nura-da'
-  - ' Nin garriberri marri-da'
-  - ' Naa-ni nin Badagarang'
+  - Diya dah wingaru nura nunang la nung ngyina garriberri
+  - Wawa nin garriberri nura-da
+  - Nin garriberri marri-da
+  - Naa-ni nin Badagarang
   - 
   translations:
   - 
@@ -1358,13 +1366,6 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 73a7e6ee479d74533b0a2c1a2f85763e, type: 3}
   - {fileID: 32900000, guid: f16cd781e29434d59a760e6a53da4289, type: 3}
   - {fileID: 32900000, guid: 9736dd7389b3346879d5a5f78bcc1a2a, type: 3}
-  listOfVideos:
-  - Magpie_Part1_ENTER_TRANSPARENT.mov.webm
-  - Magpie_Part3_TPCA_TRANSPARENT.mov.webm
-  - Magpie_Part4_CGPG_TRANSPARENT.mov.webm
-  - Magpie_Part5_CGB_TRANSPARENT.mov.webm
-  - Magpie_Part6_STK_TRANSPARENT.mov.webm
-  - Magpie_Part2_LOOP_TRANSPARENT.mov.webm
 --- !u!64 &235156741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1484,7 +1485,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: f16cd781e29434d59a760e6a53da4289, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 09202919b8583471f8d27bac4711652a, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1507,7 +1508,7 @@ VideoPlayer:
   m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 0
   m_SkipOnDrop: 0
-  m_Looping: 0
+  m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
 --- !u!1 &258318679
@@ -1711,7 +1712,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &331755222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2021,8 +2022,6 @@ MonoBehaviour:
   Follow2: {fileID: 0}
   listVideo:
   - {fileID: 32900000, guid: 28aebf23106084ca691af1555624d756, type: 3}
-  listOfVideos:
-  - Boy_Part1_LOOP_TRANSPARENT.mov.webm
 --- !u!64 &418855623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2455,7 +2454,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
@@ -2825,7 +2824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &876629388
 Transform:
   m_ObjectHideFlags: 0
@@ -3334,7 +3333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1081556741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3374,7 +3373,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 0.5
+  m_ScaleInLightmap: 1
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -3520,7 +3519,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1116723750
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4002,8 +4001,8 @@ MonoBehaviour:
   - {fileID: 0}
   dharug:
   - 
-  - ' Ngaya ngyinu Wurrai'
-  - ' Bada-la Bada lalibyila '
+  - Ngaya ngyinu Wurrai
+  - 'Bada-la Bada lalibyila '
   - 
   translations:
   - 
@@ -4017,11 +4016,6 @@ MonoBehaviour:
   - {fileID: 32900000, guid: a75f64003e08f421dbca0af3d1ee2c30, type: 3}
   - {fileID: 32900000, guid: 552b354a2b97f44efa5e2c0f58a0cad9, type: 3}
   - {fileID: 32900000, guid: 5e368ff7b2ad24403acd79d22598b85e, type: 3}
-  listOfVideos:
-  - Woman_Part1_LOOP_TRANSPARENT.mov.webm
-  - Woman_Part3_IAYA_TRANSPARENT.mov.webm
-  - Woman_Part2_TurnToRiver_TRANSPARENT.mov.webm
-  - Woman_Part1_LOOP_TRANSPARENT.mov.webm
 --- !u!82 &1393665964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4316,6 +4310,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4443,7 +4438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1542796558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4461,6 +4456,10 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
+  m_PreviousLayer: 0
+  m_PreviousPriority: 0
+  m_TempColliders: []
+  m_InternalProfile: {fileID: 0}
 --- !u!65 &1542796559
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4595,13 +4594,13 @@ MonoBehaviour:
   - {fileID: 0}
   dharug:
   - 
-  - ' Ngaya Burramatta-ga'
-  - ' Ngaya Nambrimbrii-ma'
+  - Ngaya Burramatta-ga
+  - Ngaya Nambrimbrii-ma
   - 
   translations:
   - 
-  - ' I am from Paramatta '
-  - ' I am Nambrimbrii  (let the rivers run, let the people be all one color) '
+  - 'I am from Paramatta '
+  - 'I am Nambrimbrii  (let the rivers run, let the people be all one color) '
   - 
   Follow1: {fileID: 2002289852}
   Follow2: {fileID: 0}
@@ -4610,11 +4609,6 @@ MonoBehaviour:
   - {fileID: 32900000, guid: dd46095eb9ab8445f91639e601b2b8aa, type: 3}
   - {fileID: 32900000, guid: 2aa8c7c3962a34f91b877ce913657bf7, type: 3}
   - {fileID: 32900000, guid: 930b8cbd8aed345ea8269a4041820752, type: 3}
-  listOfVideos:
-  - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
-  - SittingMan_Part2_IAFP_TRANSPARENT.mov.webm
-  - SittingMan_Part3_IAN_TRANSPARENT.mov.webm
-  - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
 --- !u!64 &1557793971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4858,16 +4852,6 @@ PrefabInstance:
       propertyPath: m_MotionVectors
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: e9de735e99afa484fad9b5013c7d4f73,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: e9de735e99afa484fad9b5013c7d4f73,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_Name
@@ -4876,7 +4860,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
@@ -4990,7 +4974,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
@@ -5180,7 +5164,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 1
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &1775017281
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5190,7 +5174,7 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775017280}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -5207,7 +5191,7 @@ MeshRenderer:
   m_StaticBatchRoot: {fileID: 0}
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 0.5
+  m_ScaleInLightmap: 1
   m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
@@ -5336,11 +5320,6 @@ PrefabInstance:
       propertyPath: m_ReceiveShadows
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: -1504981713932161579, guid: e9de735e99afa484fad9b5013c7d4f73,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_Name
@@ -5349,7 +5328,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: e9de735e99afa484fad9b5013c7d4f73,
         type: 3}
@@ -5743,7 +5722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1982120781
 Transform:
   m_ObjectHideFlags: 0
@@ -5823,11 +5802,11 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 408c3edf900f988238c35a141771b93a, type: 3}
   dharug:
   - 
-  - ' Warami wellamabami'
-  - ' Ngan ngyinu giyara'
-  - ' Ngyina-wa Mudjin-Marlin'
-  - ' Ngaya ngyinu Guwan'
-  - ' Yenma-la yenma lalibylia'
+  - Warami wellamabami
+  - Ngan ngyinu giyara
+  - Ngyina-wa Mudjin-Marlin
+  - Ngaya ngyinu Guwan
+  - Yenma-la yenma lalibylia
   - 
   translations:
   - 
@@ -5835,8 +5814,6 @@ MonoBehaviour:
   - 'Whats your name? '
   - 'We are your relatives '
   - I am your uncle
-  - Let's eat
-  - 
   Follow1: {fileID: 1557793970}
   Follow2: {fileID: 1393665963}
   listVideo:
@@ -5847,14 +5824,6 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
   - {fileID: 32900000, guid: 4c0502968e6e04a3abf841a3b8068120, type: 3}
   - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
-  listOfVideos:
-  - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
-  - StandingMan_Part2_IGTSY_TRANSPARENT.mov.webm
-  - StandingMan_Part2_IGTSY_TRANSPARENT.mov.webm
-  - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
-  - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
-  - StandingMan_Part3_TurnToRiver_TRANSPARENT.mov.webm
-  - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
 --- !u!64 &2002289853
 MeshCollider:
   m_ObjectHideFlags: 0

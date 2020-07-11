@@ -9,11 +9,11 @@ public class TriggerScript : MonoBehaviour
     PlayAudio remote;
     AudioSource audioSource, remoteSource;
     
-    public PlayAudio.stage level ;
+    public PlayAudio.stage level = PlayAudio.stage.Start;
     PlayAudio playaudio;
     public string dharug;
     public string translations;
-   
+    
     int number;
 
     public Text text;
@@ -73,11 +73,8 @@ public class TriggerScript : MonoBehaviour
             }
             if (gameObject.tag == "POI3")
             {
-            //Audio 3
-            PlayerPrefs.SetString("StoredStage", playaudio.level.ToString());
-
-
-            SceneManager.LoadScene("2DScene");
+                //Audio 3
+                SceneManager.LoadScene("2DScene");
                 Debug.Log("POI3");
             }
 

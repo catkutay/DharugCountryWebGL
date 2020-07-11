@@ -49,24 +49,24 @@ public class Movement3D : MonoBehaviour
         if (Input.GetKeyDown("a") || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             //Rotate to the left
-           angleY -= .5f;
+           angleY -= .6f;
         }
-            //if (Input.GetKeyUp("a") || (Input.GetKeyUp(KeyCode.LeftArrow)))
-            //{
-            //    //Rotate to the left
-            //    angleY += .6f;
-            //}
+            if (Input.GetKeyUp("a") || (Input.GetKeyUp(KeyCode.LeftArrow)))
+            {
+                //Rotate to the left
+                angleY += .6f;
+            }
 
         if (Input.GetKeyDown("d") || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
-            angleY += .5f;
+            angleY += .6f;
             //Rotate to the right
         }
-            //if (Input.GetKeyUp("d") || (Input.GetKeyUp(KeyCode.RightArrow)))
-            //{
-            //    angleY -= .6f;
-            //    //Rotate to the right
-            //}
+            if (Input.GetKeyUp("d") || (Input.GetKeyUp(KeyCode.RightArrow)))
+            {
+                angleY -= .6f;
+                //Rotate to the right
+            }
 
 
         if (Distance > 3000 )
@@ -79,13 +79,13 @@ public class Movement3D : MonoBehaviour
         
         if (this.transform.rotation.eulerAngles.z > 30f && this.transform.rotation.eulerAngles.z < 5f )
         {
-            angleZ -= .1f;
+            angleZ -= .5f;
             //Debug.Log("30>" );
         }
 
         if (this.transform.rotation.eulerAngles.z < -30f && this.transform.rotation.eulerAngles.z > -5f )
         {
-            angleZ += .1f;
+            angleZ += .5f;
 
         }
 
