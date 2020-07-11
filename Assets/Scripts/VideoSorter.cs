@@ -164,18 +164,19 @@ public class VideoSorter : MonoBehaviour
         url = System.IO.Path.Combine(Application.streamingAssetsPath, "Videos", listOfVideos[Fileno]);
 
         videoplayer.url = url;
-        videoplayer.Play();
+        //videoplayer.Play();
 
 #else
         videoplayer.clip = listVideo[Fileno];
-        videoplayer.Play();
+        //videoplayer.Play();
        
 #endif
-                //videoplayer.Play();
+                videoplayer.Play();
                
 
                 //play background sounds;
-                if (Fileno==0) audiosource.Play();
+               // if (Fileno==0)
+                audiosource.Play();
                 //add end loop audio
                 yield return new WaitForSeconds(1f);
                 if (level == stage.Dharug) text.text = dharug[Fileno];
@@ -185,7 +186,7 @@ public class VideoSorter : MonoBehaviour
                 if ( name=="Man Standing"|name=="Woman" |Fileno == listVideo.Length-1)
                 {
                     
-                    audiosource.Play();
+                    //audiosource.Play();
                     yield return new WaitUntil(() => !audiosource.isPlaying);
                 }
                 if (name == "Man Standing" & (Fileno == 1 | Fileno == 2))
