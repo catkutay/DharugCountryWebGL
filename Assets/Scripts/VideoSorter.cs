@@ -50,7 +50,7 @@ public class VideoSorter : MonoBehaviour
         videoplayer.Prepare();
 
 #elif UNITY_WEBGL
-        url = System.IO.Path.Combine(Application.streamingAssetsPath, "Videos", listOfVideos[0]);
+        url = System.IO.Path.Combine(Application.streamingAssetsPath, listOfVideos[0]);
 
         videoplayer.url = url;
 
@@ -153,7 +153,7 @@ public class VideoSorter : MonoBehaviour
 
                 //videoplayer.Play();
 #elif UNITY_WEBGL
-        url = System.IO.Path.Combine(Application.streamingAssetsPath, "Videos", listOfVideos[Fileno]);
+        url = System.IO.Path.Combine(Application.streamingAssetsPath, listOfVideos[Fileno]);
 
         videoplayer.url = url;
         videoplayer.Play();
