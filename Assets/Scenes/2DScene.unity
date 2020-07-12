@@ -342,6 +342,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 4eedb138b2d7240db8312950fe78ac96, type: 3}
   - {fileID: 32900000, guid: 70c5100d68a85436b9912f29a1e7762a, type: 3}
   - {fileID: 32900000, guid: e0b369614b6c64726ac8221cd54be257, type: 3}
+  listOfVideos: []
 --- !u!82 &31361732
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1366,6 +1367,13 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 73a7e6ee479d74533b0a2c1a2f85763e, type: 3}
   - {fileID: 32900000, guid: f16cd781e29434d59a760e6a53da4289, type: 3}
   - {fileID: 32900000, guid: 9736dd7389b3346879d5a5f78bcc1a2a, type: 3}
+  listOfVideos:
+  - Magpie_Part1_ENTER_TRANSPARENT.mov.webm
+  - Magpie_Part3_TPCA_TRANSPARENT.mov.webm
+  - Magpie_Part4_CGPG_TRANSPARENT.mov.webm
+  - Magpie_Part5_CGB_TRANSPARENT.mov.webm
+  - Magpie_Part6_STK_TRANSPARENT.mov.webm
+  - Magpie_Part2_LOOP_TRANSPARENT.mov.webm
 --- !u!64 &235156741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2022,6 +2030,7 @@ MonoBehaviour:
   Follow2: {fileID: 0}
   listVideo:
   - {fileID: 32900000, guid: 28aebf23106084ca691af1555624d756, type: 3}
+  listOfVideos: []
 --- !u!64 &418855623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4016,6 +4025,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: a75f64003e08f421dbca0af3d1ee2c30, type: 3}
   - {fileID: 32900000, guid: 552b354a2b97f44efa5e2c0f58a0cad9, type: 3}
   - {fileID: 32900000, guid: 5e368ff7b2ad24403acd79d22598b85e, type: 3}
+  listOfVideos: []
 --- !u!82 &1393665964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4438,7 +4448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1542796558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4456,9 +4466,10 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   priority: 0
-  m_PreviousLayer: 0
+  m_PreviousLayer: 8
   m_PreviousPriority: 0
-  m_TempColliders: []
+  m_TempColliders:
+  - {fileID: 1542796559}
   m_InternalProfile: {fileID: 0}
 --- !u!65 &1542796559
 BoxCollider:
@@ -4609,6 +4620,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: dd46095eb9ab8445f91639e601b2b8aa, type: 3}
   - {fileID: 32900000, guid: 2aa8c7c3962a34f91b877ce913657bf7, type: 3}
   - {fileID: 32900000, guid: 930b8cbd8aed345ea8269a4041820752, type: 3}
+  listOfVideos: []
 --- !u!64 &1557793971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5824,6 +5836,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
   - {fileID: 32900000, guid: 4c0502968e6e04a3abf841a3b8068120, type: 3}
   - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
+  listOfVideos: []
 --- !u!64 &2002289853
 MeshCollider:
   m_ObjectHideFlags: 0

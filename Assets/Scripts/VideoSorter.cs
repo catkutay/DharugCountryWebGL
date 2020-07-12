@@ -7,7 +7,7 @@ public class VideoSorter : MonoBehaviour
 {
     public enum stage { Start, Dharug, English, None };
     public Text text;
-    public stage level=stage.Start;
+    public stage level = stage.Start;
     public bool change, play, next ;
     public int Fileno = 0;
     public GameObject figures;
@@ -18,7 +18,7 @@ public class VideoSorter : MonoBehaviour
     public VideoClip[] listVideo;
     public string[] listOfVideos;
     string url;
-  
+
     VideoPlayer videoplayer;
 
     //fix when get magpie
@@ -30,36 +30,25 @@ public class VideoSorter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        try
-        {
-            level = (stage)System.Enum.Parse(typeof(stage), PlayerPrefs.GetString("StoredStage"));
-        }
-        catch
-        {
-            PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
-            level = stage.Start;
-        }
+        
+        if (level == stage.English) level = stage.None;
         if (level == stage.Dharug) level = stage.English;
-        if (level == stage.None) level = stage.Dharug;
-        if (level == stage.Start) level = stage.None;
-        // level = stage.Dharug;
-        PlayerPrefs.SetString("StoredStage", level.ToString());
-      
+        if (level == stage.Start) level = stage.Dharug;
         videoplayer = transform.GetComponent<VideoPlayer>();
-
-        //   Text[] texts = FindObjectsOfType<Text>();
+     //   Text[] texts = FindObjectsOfType<Text>();
         //text= GetComponent<Text>();
       //  text = texts[0];
         audiosource = transform.GetComponent<AudioSource>();
         // Debug.Log(texts);
 
         //   pdsend = GetComponent<PD2dPortSend>();
-
+            
+       
 #if UNITY_EDITOR_OSX
 
         videoplayer.clip = listVideo[0];
         videoplayer.Prepare();
-        
+
 #elif UNITY_WEBGL
         url = System.IO.Path.Combine(Application.streamingAssetsPath, "Videos", listOfVideos[0]);
 
@@ -69,6 +58,7 @@ public class VideoSorter : MonoBehaviour
         videoplayer.clip = listVideo[Fileno];
         videoplayer.Prepare();
 #endif
+
 
         play = true;
         next = true;
@@ -143,8 +133,7 @@ public class VideoSorter : MonoBehaviour
 
         }
         //stop looping for talking
-        if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
-        else videoplayer.isLooping = true;
+        if (0 < Fileno| Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
         //move to next video segment
         if (Fileno < listVideo.Length)
         {
@@ -154,29 +143,30 @@ public class VideoSorter : MonoBehaviour
               
                 //pdsend.sendMessagePD("3 2");
                 audiosource.clip = listAudio[Fileno];
+                
+               
+                //loop if last video -FIXME?
 
 #if UNITY_EDITOR_OSX
 
                 videoplayer.clip = listVideo[Fileno];
 
-
+                //videoplayer.Play();
 #elif UNITY_WEBGL
         url = System.IO.Path.Combine(Application.streamingAssetsPath, "Videos", listOfVideos[Fileno]);
 
         videoplayer.url = url;
-        //videoplayer.Play();
+        videoplayer.Play();
 
 #else
         videoplayer.clip = listVideo[Fileno];
-        //videoplayer.Play();
+        videoplayer.Play();
        
 #endif
-                videoplayer.Play();
-               
 
-                //play background sounds;
-               // if (Fileno==0)
-                audiosource.Play();
+
+                //play bac kground sounds;
+                //if (Fileno==0) audiosource.Play();
                 //add end loop audio
                 yield return new WaitForSeconds(1f);
                 if (level == stage.Dharug) text.text = dharug[Fileno];
@@ -186,7 +176,7 @@ public class VideoSorter : MonoBehaviour
                 if ( name=="Man Standing"|name=="Woman" |Fileno == listVideo.Length-1)
                 {
                     
-                    //audiosource.Play();
+                    audiosource.Play();
                     yield return new WaitUntil(() => !audiosource.isPlaying);
                 }
                 if (name == "Man Standing" & (Fileno == 1 | Fileno == 2))
@@ -217,8 +207,8 @@ public class VideoSorter : MonoBehaviour
                 //wait after first language spoken
                 if (Fileno>0)next = false;
                 
+             
                 Fileno += 1;
-
                 //not working
                 //yield return new WaitForSeconds(1f);
                 videoplayer.loopPointReached += CheckOver;

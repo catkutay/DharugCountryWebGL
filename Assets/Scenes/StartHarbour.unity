@@ -6017,7 +6017,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  serializedVersion: 4
+  serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
@@ -16248,11 +16248,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 144764111}
     m_Modifications:
-    - target: {fileID: -9209831550741049261, guid: e4b025b195339274a9e51f5c056c3707,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -7521248601636815743, guid: e4b025b195339274a9e51f5c056c3707,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16288,11 +16283,6 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b76cb16f473a24e2a960ecf0ab536ad7, type: 2}
-    - target: {fileID: -4647482895947241726, guid: e4b025b195339274a9e51f5c056c3707,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e4b025b195339274a9e51f5c056c3707,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -16368,11 +16358,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Raven Realistic
       objectReference: {fileID: 0}
-    - target: {fileID: 1967198244111907730, guid: e4b025b195339274a9e51f5c056c3707,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3946717637376930408, guid: e4b025b195339274a9e51f5c056c3707,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -16389,6 +16374,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: dbe554ebf02a169499ce1f9149d03a01, type: 2}
     - target: {fileID: 5397655089660064055, guid: e4b025b195339274a9e51f5c056c3707,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1967198244111907730, guid: e4b025b195339274a9e51f5c056c3707,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -9209831550741049261, guid: e4b025b195339274a9e51f5c056c3707,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -4647482895947241726, guid: e4b025b195339274a9e51f5c056c3707,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -16461,10 +16461,11 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 40
@@ -22377,7 +22378,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1850930323
 BoxCollider:
   m_ObjectHideFlags: 0
