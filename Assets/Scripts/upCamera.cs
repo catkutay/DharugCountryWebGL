@@ -22,18 +22,18 @@ public class upCamera : MonoBehaviour
     {
 
       
-        if (Input.GetKeyDown("w") )
+        if (Input.GetKeyDown("w") || (Input.GetKeyDown(KeyCode.UpArrow)))
         {
             Up = true;
             Down = false;
         }
-        if (Input.GetKeyDown("s") )
+        if (Input.GetKeyDown("s") || (Input.GetKeyDown(KeyCode.DownArrow)))
         {
             Up = false;
             Down = true;
 
         }
-        if (Input.GetKeyUp("w") ||Input.GetKeyUp("s") )
+        if (Input.GetKeyUp("w") ||Input.GetKeyUp("s") || (Input.GetKeyUp(KeyCode.UpArrow) )|| (Input.GetKeyUp(KeyCode.DownArrow)))
         {
             Up = false;
             Down = false;

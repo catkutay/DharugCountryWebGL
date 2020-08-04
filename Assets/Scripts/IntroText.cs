@@ -42,10 +42,7 @@ public class IntroText : MonoBehaviour
         {
             replay = false;
         }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            SceneManager.LoadScene("StartHarbour");
-        }
+     
     }
     private void ConnectToTcpServer()
     {

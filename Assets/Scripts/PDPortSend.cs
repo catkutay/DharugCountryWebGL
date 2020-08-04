@@ -27,7 +27,7 @@ public class PDPortSend : MonoBehaviour
         socketConnection = new TcpClient("localhost", 9000);
       // do in intro
         //ConnectToTcpServer();
-      //  sendMessagePD("1 1");
+        sendMessagePD("1 1");
     }
     // Update is called once per frame
     void Update()

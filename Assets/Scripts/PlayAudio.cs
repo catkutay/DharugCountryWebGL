@@ -78,10 +78,7 @@ public class PlayAudio : MonoBehaviour
             if (level == stage.None) level = stage.Dharug;
             if (level == stage.Start) level = stage.None;
         }
-        else if (Input.GetKeyDown(KeyCode.N))
-        {
-            SceneManager.LoadScene("2DScene");
-        }
+       
 
             StartCoroutine(RunAudio());
         
