@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: d4c7e05af566a48a99218509ee57c9c1
+=======
+<<<<<<< HEAD:Assets/Scenes/StartHarbourSettings.lighting.meta
+guid: 323fbc97d01d645438c22c30491a077e
+=======
+guid: d4c7e05af566a48a99218509ee57c9c1
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/_TerrainAutoUpgrade/layer_1f7f58b4d8dbf62d.terrainlayer.meta
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

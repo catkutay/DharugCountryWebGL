@@ -346,7 +346,11 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36493182}
   m_Enabled: 1
+<<<<<<< HEAD
   m_VideoClip: {fileID: 32900000, guid: 42a7ff152244e4c42a6322b13c96826a, type: 3}
+=======
+  m_VideoClip: {fileID: 0}
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -359,12 +363,23 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
+<<<<<<< HEAD
   m_TargetAudioSources: []
   m_DirectAudioVolumes: []
   m_Url: ./StreamingAssets/BlueSky_FullFilm_H264.mp4
   m_EnabledAudioTracks: 
   m_DirectAudioMutes: 
   m_ControlledAudioTrackCount: 0
+=======
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: ./StreamingAssets/BlueSky_FullFilm_H264.mp4
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
   m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 0

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 6c13d39be0e274a5a878f03fabe4ace5
+=======
+<<<<<<< HEAD:Assets/_TerrainAutoUpgrade/layer_391b1ea8121eb274.terrainlayer.meta
+guid: 29753856988d44a82bff1ed04c647128
+=======
+guid: 6c13d39be0e274a5a878f03fabe4ace5
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Scenes/StartUpSettings.lighting.meta
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

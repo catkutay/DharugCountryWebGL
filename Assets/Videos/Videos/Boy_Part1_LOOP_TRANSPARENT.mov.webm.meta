@@ -1,0 +1,31 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Videos/soccer1.webm.meta
+guid: 42a7ff152244e4c42a6322b13c96826a
+=======
+guid: 28aebf23106084ca691af1555624d756
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Videos/Videos/Boy_Part1_LOOP_TRANSPARENT.mov.webm.meta
+VideoClipImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  frameRange: 0
+  startFrame: -1
+  endFrame: -1
+  colorSpace: 0
+  deinterlace: 0
+  encodeAlpha: 1
+  flipVertical: 0
+  flipHorizontal: 0
+  importAudio: 1
+  targetSettings:
+    0:
+      enableTranscoding: 1
+      codec: 0
+      resizeFormat: 0
+      aspectRatio: 0
+      customWidth: 360
+      customHeight: 360
+      bitrateMode: 2
+      spatialQuality: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

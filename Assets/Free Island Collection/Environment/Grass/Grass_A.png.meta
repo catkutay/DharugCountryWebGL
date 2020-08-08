@@ -1,6 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: c6a916989b92ad641abb97317d1a3a90
 timeCreated: 1512098383
+=======
+<<<<<<< HEAD:Assets/Free Island Collection/Environment/Terrain/Textures/Sand/Sand_Normal.png.meta
+guid: 4461133173c4c6f4699bb1d9e2d83ba4
+timeCreated: 1508796449
+=======
+guid: c6a916989b92ad641abb97317d1a3a90
+timeCreated: 1512098383
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Grass/Grass_A.png.meta
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}
@@ -8,7 +18,15 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
+<<<<<<< HEAD
     sRGBTexture: 1
+=======
+<<<<<<< HEAD:Assets/Free Island Collection/Environment/Terrain/Textures/Sand/Sand_Normal.png.meta
+    sRGBTexture: 0
+=======
+    sRGBTexture: 1
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Grass/Grass_A.png.meta
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -42,9 +60,19 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
+<<<<<<< HEAD
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 0
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+<<<<<<< HEAD:Assets/Free Island Collection/Environment/Terrain/Textures/Sand/Sand_Normal.png.meta
+  textureType: 1
+=======
+  textureType: 0
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Grass/Grass_A.png.meta
+>>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
