@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c5f1054433640f9a7fc5ed0057da4b, type: 3}
   m_Name: 
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   - The corroboree ground is big
   - See the kangaroo
   - '  '
-  Follow1: {fileID: 0}
+  Follow1: {fileID: 31361731}
   Follow2: {fileID: 0}
   listVideo:
   - {fileID: 32900000, guid: d39fcc1c83e844f21a2b2dc3e3b5557f, type: 3}
@@ -1750,14 +1750,14 @@ VideoPlayer:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: ./StreamingAssets/BlueSky_FullFilm_H264.mp4
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 1
+  m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &258318679
