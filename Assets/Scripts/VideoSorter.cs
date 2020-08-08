@@ -62,7 +62,7 @@ public class VideoSorter : MonoBehaviour
 
 
 #elif UNITY_WEBGL
-use video loaded
+
 if (folder=="")
     url = System.IO.Path.Combine(Application.streamingAssetsPath, listOfVideos[0]);
 else
