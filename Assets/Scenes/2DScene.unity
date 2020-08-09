@@ -1565,7 +1565,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 72c5f1054433640f9a7fc5ed0057da4b, type: 3}
   m_Name: 
@@ -1605,7 +1605,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 4d014464f40ae4f538c277c8550edf7c, type: 3}
   - {fileID: 32900000, guid: 22971ae75ae874d0cb04e7bd182594b5, type: 3}
   - {fileID: 32900000, guid: 349e2f9bc51d546dfad67a25cd231d18, type: 3}
-  - {fileID: 32900000, guid: 349e2f9bc51d546dfad67a25cd231d18, type: 3}
+  - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
   - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
   listOfVideos:
   - Magpie_Part1_ENTER_TRANSPARENT.mov.webm
@@ -1733,7 +1733,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: afd35ff2e908e48c081f426dc5a4036b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d39fcc1c83e844f21a2b2dc3e3b5557f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1743,14 +1743,14 @@ VideoPlayer:
   m_TargetMaterialProperty: _MainTex
   m_RenderMode: 2
   m_AspectRatio: 3
-  m_DataSource: 1
+  m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 1
   m_TargetAudioSources:
   - {fileID: 0}
   m_DirectAudioVolumes:
   - 1
-  m_Url: ./StreamingAssets/BlueSky_FullFilm_H264.mp4
+  m_Url: 
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
@@ -2996,7 +2996,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &682338412
 Transform:
   m_ObjectHideFlags: 0

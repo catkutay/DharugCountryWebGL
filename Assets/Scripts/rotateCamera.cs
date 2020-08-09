@@ -29,14 +29,7 @@ public class rotateCamera : MonoBehaviour
         {
             move += 2f;
            
-        }
-        if (Input.GetKeyDown("w") || (Input.GetKeyDown(KeyCode.UpArrow)))
-        {
-            
-            
-        }
-        if (Input.GetKeyDown("s") || (Input.GetKeyDown(KeyCode.DownArrow)))
-        {
+      
             
            
         }

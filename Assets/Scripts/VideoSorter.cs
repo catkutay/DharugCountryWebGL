@@ -52,7 +52,7 @@ public class VideoSorter : MonoBehaviour
         //text= GetComponent<Text>();
         //  text = texts[0];
         audiosource = transform.GetComponent<AudioSource>();
-        // Debug.Log(texts);
+       // Debug.Log(texts);
 
         //   pdsend = GetComponent<PD2dPortSend>();
 
@@ -64,7 +64,7 @@ public class VideoSorter : MonoBehaviour
 #elif UNITY_WEBGL
 
 if (folder=="")
-    url = System.IO.Path.Combine(Application.streamingAssetsPath, listOfVideos[0]);
+    url = System.IO.Path.Combine(Application.streamingAssetsPath,listOfVideos[0]);
 else
        url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[0]);
 
@@ -99,7 +99,7 @@ else
     IEnumerator RunVideo()
     {
         //  Debug.Log(name+ play+ change);
-
+        Debug.Log(Camera.main.transform.eulerAngles);
         //activate next speaker
         if (change & name == "Magpie" & Fileno == 4)
         {
@@ -120,7 +120,7 @@ else
 
         }
 
-
+        Debug.Log(Camera.main.transform.eulerAngles);
         // Move to next speaker
         if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
         {
@@ -148,7 +148,7 @@ else
 
 
         }
-        //stop looping for talking
+        //stop looping for talking videos
         if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
         else videoplayer.isLooping = true;
         //move to next video segment
@@ -194,7 +194,7 @@ else
                 if (level == stage.Dharug) text.text = dharug[Fileno];
                 else if (level == stage.English) text.text = translations[Fileno];
                 else text.text = "";
-                text.text = videoplayer.url.ToString();
+
                 if (name == "Man Standing" | name == "Woman" | Fileno == listVideo.Length - 1)
                 {
 
