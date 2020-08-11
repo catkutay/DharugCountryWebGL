@@ -16,8 +16,6 @@ public class IntroText : MonoBehaviour
     AudioSource audiosource;
     AudioClip audioclip;
     bool replay = true;
-    public enum stage { Start, Dharug, English, None };
-    public stage level=stage.Start;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -26,23 +24,24 @@ public class IntroText : MonoBehaviour
         ConnectToTcpServer();
         sendMessage("1 1");
         Text.text= "This Language Learning Game was developed with\n   Dharug Teacher: Richard Green\nAnimations and graphics:\n    Jalmara Town    Josh Yasserie\n Erin Topfer Genevieve Stewart\n        Deborah Szapiro\nGame Developers: \n     Zac Casimatis   Cat Kutay\n Jaime Garcia    William Raffe\n";
-        PlayerPrefs.SetString("StoredStage", level.ToString());
+
 
         StartCoroutine(RunAudio());
       
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            replay = false;
+            SceneManager.LoadScene("StartHarbour");
+        }
         if (Input.GetKeyDown(KeyCode.R))
         {
             //rerun
             StartCoroutine(RunAudio());
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            replay = false;
-        }
-     
+       
     }
     private void ConnectToTcpServer()
     {
@@ -73,8 +72,9 @@ public class IntroText : MonoBehaviour
         }
        }
         //  sendMessage("1 2");
+       
+        Text.text = "\n\n\n\n\n\n\n\nPress R to replay; C for next Scene";
         if (!replay) SceneManager.LoadScene("StartHarbour");
-        Text.text = "\n\n\n\n\n\n\n\nPress R to replay; C for nexft Scene";
     }
    
 
