@@ -44,7 +44,7 @@ public class PlayAudio : MonoBehaviour
         //not sure why need this
         if (level == stage.English) level = stage.Start;
 
-
+        if(level == stage.English) level = stage.Start;
         if (level == stage.Dharug) level = stage.English;
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;

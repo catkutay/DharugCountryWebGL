@@ -34,6 +34,7 @@ public class IntroText : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             replay = false;
+            SceneManager.LoadScene("StartHarbour");
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -73,7 +74,7 @@ public class IntroText : MonoBehaviour
         //  sendMessage("1 2");
        
         Text.text = "\n\n\n\n\n\n\n\nPress R to replay; C for next Scene";
-        if (!replay| Input.GetKeyDown(KeyCode.C)) SceneManager.LoadScene("StartHarbour");
+        if (!replay) SceneManager.LoadScene("StartHarbour");
     }
    
 

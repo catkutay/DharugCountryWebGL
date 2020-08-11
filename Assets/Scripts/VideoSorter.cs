@@ -40,6 +40,7 @@ public class VideoSorter : MonoBehaviour
             PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
             level = stage.Start;
         }
+        if (level == stage.English) level = stage.Start;
         if (level == stage.Dharug) level = stage.English;
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
@@ -74,7 +75,7 @@ else
         videoplayer.clip = listVideo[Fileno];
         videoplayer.Prepare();
 #endif
-        videoplayer.Prepare();
+        
         play = true;
         next = true;
 
@@ -173,7 +174,7 @@ else
                 url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[Fileno]);
 
                 videoplayer.url = url;
-                videoplayer.Prepare();
+                
         
 
 #else
