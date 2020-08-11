@@ -40,19 +40,19 @@ public class VideoSorter : MonoBehaviour
             PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
             level = stage.Start;
         }
+        if (level == stage.English) level = stage.Start;
         if (level == stage.Dharug) level = stage.English;
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
-        // level = stage.Dharug;
+        level = stage.Start;
+
         PlayerPrefs.SetString("StoredStage", level.ToString());
 
         videoplayer = transform.GetComponent<VideoPlayer>();
 
-        //   Text[] texts = FindObjectsOfType<Text>();
-        //text= GetComponent<Text>();
-        //  text = texts[0];
+       
         audiosource = transform.GetComponent<AudioSource>();
-        // Debug.Log(texts);
+       
 
         //   pdsend = GetComponent<PD2dPortSend>();
 
