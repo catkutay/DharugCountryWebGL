@@ -44,7 +44,7 @@ public class VideoSorter : MonoBehaviour
         if (level == stage.Dharug) level = stage.English;
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
-        // level = stage.Dharug;
+       // level = stage.Start;
         PlayerPrefs.SetString("StoredStage", level.ToString());
 
         videoplayer = transform.GetComponent<VideoPlayer>();
