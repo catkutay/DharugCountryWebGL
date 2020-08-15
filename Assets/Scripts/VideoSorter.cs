@@ -70,12 +70,13 @@ else
        url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[0]);
 
       videoplayer.url = url;
+      videoplayer.Prepare();
 
 #else
         videoplayer.clip = listVideo[Fileno];
         videoplayer.Prepare();
 #endif
-        
+
         play = true;
         next = true;
 

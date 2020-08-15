@@ -73,7 +73,7 @@ public class IntroText : MonoBehaviour
        }
         //  sendMessage("1 2");
        
-        Text.text = "\n\n\n\n\n\n\n\nPress R to replay; C for next Scene";
+        Text.text = "\n\n\n\nFor play in this game you can:\nPress R to replay speech phrase \n Press C for next Phrase\n\nPress one now to continue";
         if (!replay) SceneManager.LoadScene("StartHarbour");
     }
    
