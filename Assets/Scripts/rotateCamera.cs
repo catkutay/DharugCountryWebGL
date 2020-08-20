@@ -22,12 +22,12 @@ public class rotateCamera : MonoBehaviour
 
         if (Input.GetKeyDown("a") || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
-            move -= 2f;
+            move -= 20f;
             
         }
         if (Input.GetKeyDown("d") || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
-            move += 2f;
+            move += 20f;
            
       
             

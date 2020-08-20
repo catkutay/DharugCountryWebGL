@@ -11,12 +11,14 @@ public class VideoSorter : MonoBehaviour
     public bool change, play, next;
     public int Fileno = 0;
     public GameObject figures;
+    //public GameObject complete;
     public AudioClip[] listAudio;
     public string[] dharug;
     public string[] translations;
     public VideoSorter Follow1, Follow2;
     public VideoClip[] listVideo;
     public string[] listOfVideos;
+    public MeshRenderer parentMesh;
     string url;
     string folder = "Videos";
 
@@ -103,6 +105,7 @@ else
         //  Debug.Log(name+ play+ change);
         Debug.Log(Camera.main.transform.eulerAngles);
         //activate next speaker
+       
         if (change & name == "Magpie" & Fileno == 4)
         {
 
@@ -115,7 +118,7 @@ else
             // figures = GameObject.FindGameObjectWithTag("Figures");
             figures.SetActive(true);
         }
-        if (name == "Man Sitting")
+        if (name == "Man Sitting" | name=="Man Standing")
         {
             yield return new WaitForSeconds(7f);
             figures.SetActive(true);
@@ -152,7 +155,7 @@ else
         }
         //stop looping for talking videos
         if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
-        else videoplayer.isLooping = true;
+        //else videoplayer.isLooping = true;
         //move to next video segment
         if (Fileno < listVideo.Length)
         {
@@ -187,12 +190,13 @@ else
                 //play background sounds;
                 if (Fileno==0) audiosource.Play();
                 videoplayer.Play();
-
-
+                parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
                 
                
                 //add end loop audio
                 yield return new WaitForSeconds(1f);
+                if (parentMesh & videoplayer.isPlaying) parentMesh.enabled = true;
+
                 if (level == stage.Dharug) text.text = dharug[Fileno];
                 else if (level == stage.English) text.text = translations[Fileno];
                 else text.text = "";
@@ -221,6 +225,7 @@ else
                     play = false;
                     Follow2.play = true;
                     Follow2.Fileno += 1;
+                    figures.SetActive(true);
                 }
                 if (name == "Woman" & (Fileno == 1 | Fileno == 2))
                 {
@@ -229,9 +234,14 @@ else
                     Follow1.Fileno += 1;
                 }
                 //wait after first language spoken
-                if (Fileno > 0) next = false;
+                if (Fileno > 0)
+                {
+                    next = false;
+                   
+                }
+        //turn off previous
 
-                Fileno += 1;
+                    Fileno += 1;
 
                 //not working
                 //yield return new WaitForSeconds(1f);
@@ -245,6 +255,7 @@ else
             }
 
         }
+        else this.gameObject.SetActive(false);
 
 
     }
