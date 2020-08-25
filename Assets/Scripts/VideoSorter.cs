@@ -11,12 +11,14 @@ public class VideoSorter : MonoBehaviour
     public bool change, play, next;
     public int Fileno = 0;
     public GameObject figures;
+    //public GameObject complete;
     public AudioClip[] listAudio;
     public string[] dharug;
     public string[] translations;
     public VideoSorter Follow1, Follow2;
     public VideoClip[] listVideo;
     public string[] listOfVideos;
+    public MeshRenderer parentMesh;
     string url;
     string folder = "Videos";
 
@@ -44,7 +46,7 @@ public class VideoSorter : MonoBehaviour
         if (level == stage.Dharug) level = stage.English;
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
-        // level = stage.Dharug;
+       // level = stage.Start;
         PlayerPrefs.SetString("StoredStage", level.ToString());
 
         videoplayer = transform.GetComponent<VideoPlayer>();
@@ -70,12 +72,13 @@ else
        url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[0]);
 
       videoplayer.url = url;
+      videoplayer.Prepare();
 
 #else
         videoplayer.clip = listVideo[Fileno];
         videoplayer.Prepare();
 #endif
-        
+
         play = true;
         next = true;
 
@@ -100,8 +103,9 @@ else
     IEnumerator RunVideo()
     {
         //  Debug.Log(name+ play+ change);
-        Debug.Log(Camera.main.transform.eulerAngles);
+        //Debug.Log(Camera.main.transform.eulerAngles);
         //activate next speaker
+       
         if (change & name == "Magpie" & Fileno == 4)
         {
 
@@ -114,21 +118,21 @@ else
             // figures = GameObject.FindGameObjectWithTag("Figures");
             figures.SetActive(true);
         }
-        if (name == "Man Sitting")
+        if (name == "Man Sitting" | name=="Man Standing")
         {
             yield return new WaitForSeconds(7f);
             figures.SetActive(true);
 
         }
 
-        Debug.Log(Camera.main.transform.eulerAngles);
+        //ebug.Log(Camera.main.transform.eulerAngles);
         // Move to next speaker
         if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
         {
 
             if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
 
-                Camera.main.transform.Rotate(Vector3.up, 10 * Time.deltaTime);
+                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
 
         }
         if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
@@ -151,7 +155,7 @@ else
         }
         //stop looping for talking videos
         if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
-        else videoplayer.isLooping = true;
+        //else videoplayer.isLooping = true;
         //move to next video segment
         if (Fileno < listVideo.Length)
         {
@@ -185,21 +189,37 @@ else
 
                 //play background sounds;
                 if (Fileno==0) audiosource.Play();
-                videoplayer.Play();
+                if (Fileno == listVideo.Length - 1)
+                {
+                    //final script - generalise FIXME
+                    text.text = translations[Fileno];
 
-
+                    videoplayer.isLooping = true;
+                    level = stage.English;
+                }
+                    videoplayer.Play();
+                parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
                 
                
-                //add end loop audio
-                yield return new WaitForSeconds(1f);
+                //wait for vidoe to load before enabling mesh
+                if (name =="Magpie" | name =="Kangaroo")
+                    yield return new WaitForSeconds(1.5f);
+                else if (name == "Woman")
+                    yield return new WaitForSeconds(4f);
+                else yield return new WaitForSeconds(2f);
+
+                if (parentMesh & videoplayer.isPlaying) parentMesh.enabled = true;
+
                 if (level == stage.Dharug) text.text = dharug[Fileno];
                 else if (level == stage.English) text.text = translations[Fileno];
                 else text.text = "";
-
+                //add end loop audio
+                //put on loop
                 if (name == "Man Standing" | name == "Woman" | Fileno == listVideo.Length - 1)
                 {
 
                     audiosource.Play();
+                    
                     yield return new WaitUntil(() => !audiosource.isPlaying);
                 }
                 if (name == "Man Standing" & (Fileno == 1 | Fileno == 2))
@@ -220,6 +240,7 @@ else
                     play = false;
                     Follow2.play = true;
                     Follow2.Fileno += 1;
+                    figures.SetActive(true);
                 }
                 if (name == "Woman" & (Fileno == 1 | Fileno == 2))
                 {
@@ -228,9 +249,14 @@ else
                     Follow1.Fileno += 1;
                 }
                 //wait after first language spoken
-                if (Fileno > 0) next = false;
+                if (Fileno > 0)
+                {
+                    next = false;
+                   
+                }
+        //turn off previous
 
-                Fileno += 1;
+                    Fileno += 1;
 
                 //not working
                 //yield return new WaitForSeconds(1f);
@@ -238,12 +264,14 @@ else
                 //pdsend.sendMessagePD("3 1");
 
                 yield return new WaitUntil(() => !videoplayer.isPlaying);
+                text.text = "Press C to continue or R to repeat phrase";
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 
 
             }
 
         }
+        else this.gameObject.SetActive(false);
 
 
     }

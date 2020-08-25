@@ -127,9 +127,10 @@ public class PlayAudio : MonoBehaviour
             }
     
             yield return new WaitUntil(() => !audiosource.isPlaying);
-       
-         
-    }
+            text.text = "Press C to continue or R to repeat phrase";
+
+
+        }
     }
     }
 

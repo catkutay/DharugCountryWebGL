@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/2DScene.unity
     guid: 636e6042e6a48074ba58cac69b4646d2
   - enabled: 0
-    path: Assets/Scenes/2dSceneSingle Video.unity
-    guid: 3f57fc48148be4cee8d85975624d33ae
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: Assets/Scenes/2DSceneWebGL.unity
+    guid: cb9d7951957c946cb9eb5c55b1cbf60f
   m_configObjects: {}

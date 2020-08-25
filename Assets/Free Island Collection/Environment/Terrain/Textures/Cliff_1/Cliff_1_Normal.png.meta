@@ -1,16 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD
 guid: e5783c8549ee2f544a9ca3f56e404a85
 timeCreated: 1508860188
-=======
-<<<<<<< HEAD:Assets/Free Island Collection/Environment/Grass/Grass_B.png.meta
-guid: bb0d5eea483852c48ae3a1202ce4aa73
-timeCreated: 1512098382
-=======
-guid: e5783c8549ee2f544a9ca3f56e404a85
-timeCreated: 1508860188
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Terrain/Textures/Cliff_1/Cliff_1_Normal.png.meta
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName: {}
@@ -18,15 +8,7 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
     enableMipMap: 1
-<<<<<<< HEAD
     sRGBTexture: 0
-=======
-<<<<<<< HEAD:Assets/Free Island Collection/Environment/Grass/Grass_B.png.meta
-    sRGBTexture: 1
-=======
-    sRGBTexture: 0
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Terrain/Textures/Cliff_1/Cliff_1_Normal.png.meta
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -62,15 +44,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 0
   spriteTessellationDetail: -1
-<<<<<<< HEAD
   textureType: 1
-=======
-<<<<<<< HEAD:Assets/Free Island Collection/Environment/Grass/Grass_B.png.meta
-  textureType: 0
-=======
-  textureType: 1
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3:Assets/Free Island Collection/Environment/Terrain/Textures/Cliff_1/Cliff_1_Normal.png.meta
->>>>>>> 17feacd936928d3ffb6055f125ec1ab82e5fe9a3
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
