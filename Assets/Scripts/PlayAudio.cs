@@ -23,6 +23,7 @@ public class PlayAudio : MonoBehaviour
     AudioClip audioclip;
     public GameObject clouds;
     public Text text;
+    public string location = "DA";
     
     PDPortSend pdsend;
     // Start is called before the first frame update
@@ -63,7 +64,8 @@ public class PlayAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (location == "DA") next = true;
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             next = true;
             //revert to saved
@@ -127,7 +129,7 @@ public class PlayAudio : MonoBehaviour
             }
     
             yield return new WaitUntil(() => !audiosource.isPlaying);
-            text.text = "Press C to continue or R to repeat phrase";
+            if (location!="DA")text.text = "Press C to continue or R to repeat phrase";
 
 
         }

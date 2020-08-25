@@ -19,6 +19,7 @@ public class VideoSorter : MonoBehaviour
     public VideoClip[] listVideo;
     public string[] listOfVideos;
     public MeshRenderer parentMesh;
+    public string location="DA";
     string url;
     string folder = "Videos";
 
@@ -87,7 +88,8 @@ else
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (location=="DA")next = true;
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             next = true;
         }
@@ -264,7 +266,7 @@ else
                 //pdsend.sendMessagePD("3 1");
 
                 yield return new WaitUntil(() => !videoplayer.isPlaying);
-                text.text = "Press C to continue or R to repeat phrase";
+              if (location!="DA")  text.text = "Press C to continue or R to repeat phrase";
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 
 
