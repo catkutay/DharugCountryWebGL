@@ -103,7 +103,7 @@ else
     IEnumerator RunVideo()
     {
         //  Debug.Log(name+ play+ change);
-        Debug.Log(Camera.main.transform.eulerAngles);
+        //Debug.Log(Camera.main.transform.eulerAngles);
         //activate next speaker
        
         if (change & name == "Magpie" & Fileno == 4)
@@ -125,14 +125,14 @@ else
 
         }
 
-        Debug.Log(Camera.main.transform.eulerAngles);
+        //ebug.Log(Camera.main.transform.eulerAngles);
         // Move to next speaker
         if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
         {
 
             if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
 
-                Camera.main.transform.Rotate(Vector3.up, 10 * Time.deltaTime);
+                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
 
         }
         if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
@@ -189,22 +189,37 @@ else
 
                 //play background sounds;
                 if (Fileno==0) audiosource.Play();
-                videoplayer.Play();
+                if (Fileno == listVideo.Length - 1)
+                {
+                    //final script - generalise FIXME
+                    text.text = translations[Fileno];
+
+                    videoplayer.isLooping = true;
+                    level = stage.English;
+                }
+                    videoplayer.Play();
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
                 
                
-                //add end loop audio
-                yield return new WaitForSeconds(1f);
+                //wait for vidoe to load before enabling mesh
+                if (name =="Magpie" | name =="Kangaroo")
+                    yield return new WaitForSeconds(1.5f);
+                else if (name == "Woman")
+                    yield return new WaitForSeconds(4f);
+                else yield return new WaitForSeconds(2f);
+
                 if (parentMesh & videoplayer.isPlaying) parentMesh.enabled = true;
 
                 if (level == stage.Dharug) text.text = dharug[Fileno];
                 else if (level == stage.English) text.text = translations[Fileno];
                 else text.text = "";
-
+                //add end loop audio
+                //put on loop
                 if (name == "Man Standing" | name == "Woman" | Fileno == listVideo.Length - 1)
                 {
 
                     audiosource.Play();
+                    
                     yield return new WaitUntil(() => !audiosource.isPlaying);
                 }
                 if (name == "Man Standing" & (Fileno == 1 | Fileno == 2))
@@ -249,6 +264,7 @@ else
                 //pdsend.sendMessagePD("3 1");
 
                 yield return new WaitUntil(() => !videoplayer.isPlaying);
+                text.text = "Press C to continue or R to repeat phrase";
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 
 
