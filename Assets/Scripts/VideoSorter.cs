@@ -19,7 +19,10 @@ public class VideoSorter : MonoBehaviour
     public VideoClip[] listVideo;
     public string[] listOfVideos;
     public MeshRenderer parentMesh;
+<<<<<<< HEAD
     public string location="DA";
+=======
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
     string url;
     string folder = "Videos";
 
@@ -266,7 +269,11 @@ else
                 //pdsend.sendMessagePD("3 1");
 
                 yield return new WaitUntil(() => !videoplayer.isPlaying);
+<<<<<<< HEAD
               if (location!="DA")  text.text = "Press C to continue or R to repeat phrase";
+=======
+                text.text = "Press C to continue or R to repeat phrase";
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 
 

@@ -129,7 +129,11 @@ public class PlayAudio : MonoBehaviour
             }
     
             yield return new WaitUntil(() => !audiosource.isPlaying);
+<<<<<<< HEAD
             if (location!="DA")text.text = "Press C to continue or R to repeat phrase";
+=======
+            text.text = "Press C to continue or R to repeat phrase";
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
 
 
         }

@@ -1,12 +1,12 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD:Assets/HDRPDefaultResources.meta
 guid: 88c52fdc96296455f983d05ce96dcd11
 =======
-<<<<<<< HEAD:Assets/PostProcessing.meta
-guid: 36f07c2a7be6d450db4ff4eece2b4054
+guid: 34c223e7c393546ef9529e8106fc7b9b
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc:Assets/models/Magpie/Part1_ENTER.meta
 =======
 guid: 88c52fdc96296455f983d05ce96dcd11
->>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc:Assets/HDRPDefaultResources.meta
 >>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
 folderAsset: yes
 DefaultImporter:

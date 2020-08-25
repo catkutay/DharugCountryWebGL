@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Videos/Videos.meta
 guid: af6ac0e446d7343609f416e919d202da
+=======
+guid: 36f07c2a7be6d450db4ff4eece2b4054
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc:Assets/PostProcessing.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

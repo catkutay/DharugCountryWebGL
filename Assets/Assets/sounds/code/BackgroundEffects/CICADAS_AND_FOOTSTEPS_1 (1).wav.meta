@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8b5c074a5416340008297b53aa2cc8b8
+=======
+<<<<<<< HEAD:Assets/Assets/sounds/code/BackgroundEffects/CICADAS_AND_DUCKS_1 (1).wav.meta
+guid: 719023e9ac05644bb931a67d12dad1f0
+=======
+guid: 8b5c074a5416340008297b53aa2cc8b8
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc:Assets/Assets/sounds/code/BackgroundEffects/CICADAS_AND_FOOTSTEPS_1 (1).wav.meta
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

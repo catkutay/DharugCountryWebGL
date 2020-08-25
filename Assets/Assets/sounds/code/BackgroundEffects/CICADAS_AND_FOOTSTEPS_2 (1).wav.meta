@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ab2713620416f4b13b7390e912350087
+=======
+<<<<<<< HEAD:Assets/Assets/sounds/code/BackgroundEffects/RIVER_1 (1).wav.meta
+guid: e2b632e9735d6454d94da1e4646589f1
+=======
+guid: ab2713620416f4b13b7390e912350087
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc:Assets/Assets/sounds/code/BackgroundEffects/CICADAS_AND_FOOTSTEPS_2 (1).wav.meta
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6

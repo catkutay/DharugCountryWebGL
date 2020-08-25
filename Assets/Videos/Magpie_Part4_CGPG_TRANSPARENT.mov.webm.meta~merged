@@ -1,0 +1,60 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 22971ae75ae874d0cb04e7bd182594b5
+=======
+guid: 5919fcb16987c4aa5a882097f02e592a
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
+VideoClipImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  frameRange: 0
+  startFrame: -1
+  endFrame: -1
+  colorSpace: 0
+  deinterlace: 0
+<<<<<<< HEAD
+  encodeAlpha: 1
+=======
+  encodeAlpha: 0
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
+  flipVertical: 0
+  flipHorizontal: 0
+  importAudio: 1
+  targetSettings:
+    0:
+      enableTranscoding: 1
+      codec: 0
+      resizeFormat: 0
+      aspectRatio: 0
+<<<<<<< HEAD
+      customWidth: 10576
+      customHeight: 1200
+      bitrateMode: 2
+      spatialQuality: 1
+    1:
+      enableTranscoding: 1
+      codec: 0
+      resizeFormat: 0
+      aspectRatio: 0
+      customWidth: 10576
+      customHeight: 1200
+      bitrateMode: 2
+      spatialQuality: 1
+    13:
+      enableTranscoding: 1
+      codec: 2
+      resizeFormat: 0
+      aspectRatio: 0
+      customWidth: 10576
+      customHeight: 1200
+      bitrateMode: 1
+      spatialQuality: 1
+=======
+      customWidth: -1
+      customHeight: -1
+      bitrateMode: 2
+      spatialQuality: 2
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

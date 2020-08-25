@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 5919fcb16987c4aa5a882097f02e592a
+<<<<<<< HEAD
+guid: 45d0fc20f3d224d73b5dfbb9400d4ec3
+=======
+guid: 9026630fd68ba4a9191d959035e03bad
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -15,11 +19,19 @@ VideoClipImporter:
   targetSettings:
     0:
       enableTranscoding: 1
+<<<<<<< HEAD
       codec: 0
+      resizeFormat: 0
+      aspectRatio: 0
+      customWidth: -1
+      customHeight: -1
+=======
+      codec: 2
       resizeFormat: 0
       aspectRatio: 0
       customWidth: 1
       customHeight: 1
+>>>>>>> 396995fb1f1a47ef1b28472afada9f8f10e720cc
       bitrateMode: 2
       spatialQuality: 2
   userData: 
