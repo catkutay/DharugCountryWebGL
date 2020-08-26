@@ -197,7 +197,7 @@ else
                     text.text = translations[Fileno];
 
                     videoplayer.isLooping = true;
-                    level = stage.English;
+                   // level = stage.English;
                 }
                     videoplayer.Play();
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;

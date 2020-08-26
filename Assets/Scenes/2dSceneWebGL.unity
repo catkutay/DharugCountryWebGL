@@ -428,6 +428,8 @@ MonoBehaviour:
   - Kangaroo_Part5_TSHC_TRANSPARENT.mov.webm
   - Kangaroo_Part6_PAC_TRANSPARENT.mov.webm
   - Kangaroo_Part7_ENDLOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!82 &31361732
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1614,6 +1616,8 @@ MonoBehaviour:
   - Magpie_Part5_CGB_TRANSPARENT.mov.webm
   - Magpie_Part6_STK_TRANSPARENT.mov.webm
   - Magpie_Part2_LOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!64 &235156741
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1733,7 +1737,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: afd35ff2e908e48c081f426dc5a4036b, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1757,7 +1761,7 @@ VideoPlayer:
   m_PlayOnAwake: 1
   m_SkipOnDrop: 0
   m_Looping: 0
-  m_WaitForFirstFrame: 0
+  m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
 --- !u!1 &258318679
@@ -2352,6 +2356,8 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 28aebf23106084ca691af1555624d756, type: 3}
   listOfVideos:
   - Boy_Part1_LOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!64 &418855623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -4640,6 +4646,8 @@ MonoBehaviour:
   - Woman_Part3_IAYA_TRANSPARENT.mov.webm
   - Woman_Part2_TurnToRiver_TRANSPARENT.mov.webm
   - Woman_Part1_LOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!82 &1393665964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5129,6 +5137,8 @@ MonoBehaviour:
   - SittingMan_Part2_IAFP_TRANSPARENT.mov.webm
   - SittingMan_Part3_IAN_TRANSPARENT.mov.webm
   - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!64 &1557793971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6563,6 +6573,8 @@ MonoBehaviour:
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part3_TurnToRiver_TRANSPARENT.mov.webm
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
+  parentMesh: {fileID: 0}
+  location: DA
 --- !u!64 &2002289853
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6790,7 +6802,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004258563}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 2534964839176971238, guid: fdfc161a3ce8240eab90bed6deba38cd, type: 3}
 --- !u!1 &2108829778
 GameObject:
   m_ObjectHideFlags: 0
