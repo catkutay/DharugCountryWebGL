@@ -23,6 +23,7 @@ public class PlayAudio : MonoBehaviour
     AudioClip audioclip;
     public GameObject clouds;
     public Text text;
+    public string location = "DA";
     
     PDPortSend pdsend;
     // Start is called before the first frame update
@@ -38,8 +39,9 @@ public class PlayAudio : MonoBehaviour
         }
         catch 
         {
-           // PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
             level = stage.Start;
+            PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
+            
         }
         //not sure why need this
         if (level == stage.English) level = stage.Start;
@@ -49,7 +51,7 @@ public class PlayAudio : MonoBehaviour
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
         //level = stage.None;
-        PlayerPrefs.SetString("StoredStage", level.ToString());
+        //PlayerPrefs.SetString("StoredStage", level.ToString());
 
 
         audiosource = transform.GetComponent<AudioSource>();
@@ -63,7 +65,8 @@ public class PlayAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C))
+        if (location == "DA") next = true;
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             next = true;
             //revert to saved
@@ -127,9 +130,10 @@ public class PlayAudio : MonoBehaviour
             }
     
             yield return new WaitUntil(() => !audiosource.isPlaying);
-       
-         
-    }
+            if (location!="DA")text.text = "Press C to continue or R to repeat phrase";
+
+
+        }
     }
     }
 
