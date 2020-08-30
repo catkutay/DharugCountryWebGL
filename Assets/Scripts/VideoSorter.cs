@@ -197,7 +197,11 @@ else
                     text.text = translations[Fileno];
 
                     videoplayer.isLooping = true;
+<<<<<<< HEAD
                     level = stage.English;
+=======
+                   // level = stage.English;
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
                 }
                     videoplayer.Play();
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
@@ -217,12 +221,20 @@ else
                 else text.text = "";
                 //add end loop audio
                 //put on loop
+<<<<<<< HEAD
                 if ( Fileno == listVideo.Length - 1)//name == "Man Standing" | name == "Woman" |
+=======
+                if (name == "Man Standing" | name == "Woman" | Fileno == listVideo.Length - 1)
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
                 {
 
                     audiosource.Play();
                     
+<<<<<<< HEAD
                    // yield return new WaitUntil(() => !audiosource.isPlaying);
+=======
+                    yield return new WaitUntil(() => !audiosource.isPlaying);
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
                 }
 
                 //wait until pause then wake next figure
@@ -257,12 +269,21 @@ else
                   //  Follow1.Fileno += 1;
                 }
                 //wait after first language spoken
+<<<<<<< HEAD
                 if (Fileno > 0 & location!="DA")
+=======
+                if (Fileno > 0)
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
                 {
                     next = false;
                    
                 }
         //turn off previous
+<<<<<<< HEAD
+=======
+
+                    Fileno += 1;
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
 
                     Fileno += 1;
                 //not working
@@ -271,7 +292,12 @@ else
 
                 //pdsend.sendMessagePD("3 1");
 
+<<<<<<< HEAD
 
+=======
+                yield return new WaitUntil(() => !videoplayer.isPlaying);
+              if (location!="DA")  text.text = "Press C to continue or R to repeat phrase";
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 
 

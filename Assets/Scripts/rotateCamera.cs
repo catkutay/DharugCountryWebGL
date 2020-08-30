@@ -22,21 +22,21 @@ public class rotateCamera : MonoBehaviour
 
         if (Input.GetKeyDown("a") || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
-            move -= 2f;
+            if (move > 0) move = 0;
+            move += -5f;
             
         }
-        if (Input.GetKeyDown("d") || (Input.GetKeyDown(KeyCode.LeftArrow)))
+        if (Input.GetKeyDown("d") || (Input.GetKeyDown(KeyCode.RightArrow)))
         {
-            move += 2f;
-           
-      
-            
+            if (move < 0) move = 0;
+            else move += 5f;
+       
            
         }
        
         
         transform.Rotate( Vector3.up, move * Time.deltaTime);
-        
+       // move = 0;
        // transform.Rotate(RotationY, 0, 0);
         //transform.Translate(new Vector3(move, 0, move));
 	
