@@ -108,53 +108,55 @@ else
         //Debug.Log(Camera.main.transform.eulerAngles);
         //activate next speaker
        
-        if (change & name == "Magpie" & Fileno == 4)
-        {
+            if (change & name == "Magpie" & Fileno == 4)
+            {
 
-            // figures = GameObject.FindGameObjectWithTag("Figures");
-            figures.SetActive(true);
-        }
-        if (change & name == "Kangaroo" & Fileno == 4)
-        {
+                // figures = GameObject.FindGameObjectWithTag("Figures");
+                figures.SetActive(true);
+            }
+            if (change & name == "Kangaroo" & Fileno == 4)
+            {
 
-            // figures = GameObject.FindGameObjectWithTag("Figures");
-            figures.SetActive(true);
-        }
-        if (name == "Man Sitting" | name=="Man Standing")
-        {
-            yield return new WaitForSeconds(7f);
-            figures.SetActive(true);
+                // figures = GameObject.FindGameObjectWithTag("Figures");
+                figures.SetActive(true);
+            }
+            if (name == "Man Sitting" | name=="Man Standing")
+            {
+                yield return new WaitForSeconds(7f);
+                figures.SetActive(true);
 
-        }
+            }
 
-        //ebug.Log(Camera.main.transform.eulerAngles);
-        // Move to next speaker
-        if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
-        {
+        //    //Debug.Log(Camera.main.transform.eulerAngles);
+        //    // Move to next speaker
+        //    if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
+        //    {
 
-            if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
+        //        if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
 
-                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
+        //            Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
 
-        }
-        if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
-        {
+        //    }
+        //    if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
+        //    {
 
-            if (Camera.main.transform.eulerAngles.y < 30 | Camera.main.transform.eulerAngles.y > 290)
+        //        if (Camera.main.transform.eulerAngles.y < 30 | Camera.main.transform.eulerAngles.y > 290)
 
-                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
+        //            Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
 
-        }
-        if (name == "Kangaroo" & Fileno > 4)
-        {
-
-
-            if (Camera.main.transform.eulerAngles.y < 35 | Camera.main.transform.eulerAngles.y > 298)
-
-                Camera.main.transform.Rotate(Vector3.up, -5 * Time.deltaTime);
+        //    }
+        //    if (name == "Kangaroo" & Fileno > 4)
+        //    {
 
 
-        }
+        //        if (Camera.main.transform.eulerAngles.y < 35 | Camera.main.transform.eulerAngles.y > 298)
+
+        //            Camera.main.transform.Rotate(Vector3.up, -5 * Time.deltaTime);
+
+
+        //    }
+        //
+
         //stop looping for talking videos
         if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
         //else videoplayer.isLooping = true;
@@ -180,17 +182,16 @@ else
                 url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[Fileno]);
 
                 videoplayer.url = url;
-                
-        
 
 #else
-                videoplayer.clip = listVideo[Fileno];
-     
+                videoplayer.clip = listVideo[Fileno];   
        
 #endif
 
                 //play background sounds;
-                if (Fileno==0) audiosource.Play();
+                //if (Fileno==0) 
+				//if (name=="Magpie"& Fileno == 1) yield return new WaitForSeconds(1f);
+				audiosource.Play();
                 if (Fileno == listVideo.Length - 1)
                 {
                     //final script - generalise FIXME

@@ -6,7 +6,7 @@ public class rotateCamera : MonoBehaviour
 {
     // Start is called before the first frame update
     float speed=0f;
-	float move=0f;
+	public float move=0f;
    
     float RotationY;
     void Start()
@@ -23,7 +23,7 @@ public class rotateCamera : MonoBehaviour
         if (Input.GetKeyDown("a") || (Input.GetKeyDown(KeyCode.LeftArrow)))
         {
             if (move > 0) move = 0;
-            move += -5f;
+            else move += -5f;
             
         }
         if (Input.GetKeyDown("d") || (Input.GetKeyDown(KeyCode.RightArrow)))

@@ -24,6 +24,7 @@ public class PlayAudio : MonoBehaviour
     public GameObject clouds;
     public Text text;
     public string location = "DA";
+	int storeFileno =0;
     
     PDPortSend pdsend;
     // Start is called before the first frame update
@@ -73,12 +74,14 @@ public class PlayAudio : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            Fileno -= 1;
+			Fileno=storeFileno-1;
             next = true;
             //update stage
+			if (level == stage.English) level = stage.Start;
             if (level == stage.Dharug) level = stage.English;
             if (level == stage.None) level = stage.Dharug;
             if (level == stage.Start) level = stage.None;
+
         }
        
 
@@ -100,6 +103,7 @@ public class PlayAudio : MonoBehaviour
 
                 audiosource.PlayDelayed(1f);
                 Fileno += 1;
+				storeFileno=Fileno;
                 //               pdsend.sendMessagePD("2 2");
 
                 //           pdsend.sendMessagePD("2 1");
