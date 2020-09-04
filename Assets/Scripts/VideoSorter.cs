@@ -129,32 +129,7 @@ else
 
         //ebug.Log(Camera.main.transform.eulerAngles);
         // Move to next speaker
-        if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
-        {
-
-            if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
-
-                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
-
-        }
-        if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
-        {
-
-            if (Camera.main.transform.eulerAngles.y < 30 | Camera.main.transform.eulerAngles.y > 290)
-
-                Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
-
-        }
-        if (name == "Kangaroo" & Fileno > 4)
-        {
-
-
-            if (Camera.main.transform.eulerAngles.y < 35 | Camera.main.transform.eulerAngles.y > 298)
-
-                Camera.main.transform.Rotate(Vector3.up, -5 * Time.deltaTime);
-
-
-        }
+       
         //stop looping for talking videos
         if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
         //else videoplayer.isLooping = true;
@@ -194,10 +169,10 @@ else
                 if (Fileno == listVideo.Length - 1)
                 {
                     //final script - generalise FIXME
-                    text.text = translations[Fileno];
+                   // text.text = translations[Fileno];
 
                     videoplayer.isLooping = true;
-                   // level = stage.English;
+                   
                 }
                     videoplayer.Play();
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;

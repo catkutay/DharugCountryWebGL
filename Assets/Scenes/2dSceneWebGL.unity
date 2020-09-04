@@ -413,13 +413,13 @@ MonoBehaviour:
   Follow1: {fileID: 0}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: c1d6ac9e86261467a88536e13e9620cb, type: 3}
-  - {fileID: 32900000, guid: e33c0f4fc4c884276a456c017f41d161, type: 3}
-  - {fileID: 32900000, guid: e8a8d899f86ef4259b1c5549dbcdf195, type: 3}
-  - {fileID: 32900000, guid: 951415a9114f9440093869d7cf95473f, type: 3}
-  - {fileID: 32900000, guid: 4eedb138b2d7240db8312950fe78ac96, type: 3}
-  - {fileID: 32900000, guid: 70c5100d68a85436b9912f29a1e7762a, type: 3}
-  - {fileID: 32900000, guid: e0b369614b6c64726ac8221cd54be257, type: 3}
+  - {fileID: 32900000, guid: 8f26e4b80ed0845d8a2e970eaa0c37e3, type: 3}
+  - {fileID: 32900000, guid: 29ee6bf03b9f3475b838b9021aa32432, type: 3}
+  - {fileID: 32900000, guid: 4d014464f40ae4f538c277c8550edf7c, type: 3}
+  - {fileID: 32900000, guid: 377763abbe311438e86fea94fdc3df52, type: 3}
+  - {fileID: 32900000, guid: 2db3250cef7074a9fb050ce182888ac6, type: 3}
+  - {fileID: 32900000, guid: f78884cc12b7749acaab77da8cfa9fe6, type: 3}
+  - {fileID: 32900000, guid: a1ad82956332642ab9fe7310679461bc, type: 3}
   listOfVideos:
   - Kangaroo_Part1_ENTER_TRANSPARENT.mov.webm
   - Kangaroo_Part2_IAAK_TRANSPARENT.mov.webm
@@ -428,7 +428,7 @@ MonoBehaviour:
   - Kangaroo_Part5_TSHC_TRANSPARENT.mov.webm
   - Kangaroo_Part6_PAC_TRANSPARENT.mov.webm
   - Kangaroo_Part7_ENDLOOP_TRANSPARENT.mov.webm
-  parentMesh: {fileID: 0}
+  parentMesh: {fileID: 45813198}
   location: DA
 --- !u!82 &31361732
 AudioSource:
@@ -966,7 +966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &132863428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1603,7 +1603,7 @@ MonoBehaviour:
   Follow1: {fileID: 31361731}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
+  - {fileID: 32900000, guid: d39fcc1c83e844f21a2b2dc3e3b5557f, type: 3}
   - {fileID: 32900000, guid: 34ec896a1690049579c20df07fddeb66, type: 3}
   - {fileID: 32900000, guid: 22971ae75ae874d0cb04e7bd182594b5, type: 3}
   - {fileID: 32900000, guid: 349e2f9bc51d546dfad67a25cd231d18, type: 3}
@@ -1737,7 +1737,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235156736}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: d39fcc1c83e844f21a2b2dc3e3b5557f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -1758,7 +1758,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 00
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 0
   m_Looping: 0
   m_WaitForFirstFrame: 1
@@ -1966,7 +1966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &292178143
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2353,10 +2353,10 @@ MonoBehaviour:
   Follow1: {fileID: 0}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: 28aebf23106084ca691af1555624d756, type: 3}
+  - {fileID: 32900000, guid: ce6c0db0dde0d47079e094ae5fa8ada7, type: 3}
   listOfVideos:
   - Boy_Part1_LOOP_TRANSPARENT.mov.webm
-  parentMesh: {fileID: 0}
+  parentMesh: {fileID: 1194618987}
   location: DA
 --- !u!64 &418855623
 MeshCollider:
@@ -3718,7 +3718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1056005156
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4355,7 +4355,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194618985}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -4637,16 +4637,16 @@ MonoBehaviour:
   Follow1: {fileID: 2002289852}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: 5e368ff7b2ad24403acd79d22598b85e, type: 3}
-  - {fileID: 32900000, guid: a75f64003e08f421dbca0af3d1ee2c30, type: 3}
-  - {fileID: 32900000, guid: 552b354a2b97f44efa5e2c0f58a0cad9, type: 3}
-  - {fileID: 32900000, guid: 5e368ff7b2ad24403acd79d22598b85e, type: 3}
+  - {fileID: 32900000, guid: 2ddd408894e8f429e82e15cd68484b50, type: 3}
+  - {fileID: 32900000, guid: b628f9b4140e14b6386d24c8bf14e38d, type: 3}
+  - {fileID: 32900000, guid: f9b79f49bf8104d6da8ccca248345a21, type: 3}
+  - {fileID: 32900000, guid: 2ddd408894e8f429e82e15cd68484b50, type: 3}
   listOfVideos:
   - Woman_Part1_LOOP_TRANSPARENT.mov.webm
   - Woman_Part3_IAYA_TRANSPARENT.mov.webm
   - Woman_Part2_TurnToRiver_TRANSPARENT.mov.webm
   - Woman_Part1_LOOP_TRANSPARENT.mov.webm
-  parentMesh: {fileID: 0}
+  parentMesh: {fileID: 1061826967}
   location: DA
 --- !u!82 &1393665964
 AudioSource:
@@ -5128,16 +5128,16 @@ MonoBehaviour:
   Follow1: {fileID: 2002289852}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: 930b8cbd8aed345ea8269a4041820752, type: 3}
-  - {fileID: 32900000, guid: dd46095eb9ab8445f91639e601b2b8aa, type: 3}
-  - {fileID: 32900000, guid: 2aa8c7c3962a34f91b877ce913657bf7, type: 3}
-  - {fileID: 32900000, guid: 930b8cbd8aed345ea8269a4041820752, type: 3}
+  - {fileID: 32900000, guid: ae412eb1e537f465a97ae521dc646161, type: 3}
+  - {fileID: 32900000, guid: 5642cefa03d6a496aad0fd168222c402, type: 3}
+  - {fileID: 32900000, guid: f4ad224c402a14588930ed090f26ad16, type: 3}
+  - {fileID: 32900000, guid: ae412eb1e537f465a97ae521dc646161, type: 3}
   listOfVideos:
   - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
   - SittingMan_Part2_IAFP_TRANSPARENT.mov.webm
   - SittingMan_Part3_IAN_TRANSPARENT.mov.webm
   - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
-  parentMesh: {fileID: 0}
+  parentMesh: {fileID: 713907676}
   location: DA
 --- !u!64 &1557793971
 MeshCollider:
@@ -6558,13 +6558,13 @@ MonoBehaviour:
   Follow1: {fileID: 1557793970}
   Follow2: {fileID: 1393665963}
   listVideo:
-  - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
-  - {fileID: 32900000, guid: 9fe72158e99ea42e1b2c2bad5d21f9cc, type: 3}
-  - {fileID: 32900000, guid: 9fe72158e99ea42e1b2c2bad5d21f9cc, type: 3}
-  - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
-  - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
-  - {fileID: 32900000, guid: 4c0502968e6e04a3abf841a3b8068120, type: 3}
-  - {fileID: 32900000, guid: 3d432ddbe251e4c369cfd66a3ec21eec, type: 3}
+  - {fileID: 32900000, guid: 04b43e89a3fd547e29e2487838332448, type: 3}
+  - {fileID: 32900000, guid: ffe0b006d6ae043e0b8d75eae3841aff, type: 3}
+  - {fileID: 32900000, guid: ffe0b006d6ae043e0b8d75eae3841aff, type: 3}
+  - {fileID: 32900000, guid: 04b43e89a3fd547e29e2487838332448, type: 3}
+  - {fileID: 32900000, guid: 04b43e89a3fd547e29e2487838332448, type: 3}
+  - {fileID: 32900000, guid: 01c9967420fa24b788a89461e8f9cd61, type: 3}
+  - {fileID: 32900000, guid: 04b43e89a3fd547e29e2487838332448, type: 3}
   listOfVideos:
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part2_IGTSY_TRANSPARENT.mov.webm
@@ -6573,7 +6573,7 @@ MonoBehaviour:
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part3_TurnToRiver_TRANSPARENT.mov.webm
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
-  parentMesh: {fileID: 0}
+  parentMesh: {fileID: 229891042}
   location: DA
 --- !u!64 &2002289853
 MeshCollider:
