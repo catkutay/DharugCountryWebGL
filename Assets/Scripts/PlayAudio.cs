@@ -39,8 +39,9 @@ public class PlayAudio : MonoBehaviour
         }
         catch 
         {
-           // PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
             level = stage.Start;
+            PlayerPrefs.SetString("StoredStage", stage.Start.ToString());
+            
         }
         //not sure why need this
         if (level == stage.English) level = stage.Start;
@@ -50,7 +51,7 @@ public class PlayAudio : MonoBehaviour
         if (level == stage.None) level = stage.Dharug;
         if (level == stage.Start) level = stage.None;
         //level = stage.None;
-        PlayerPrefs.SetString("StoredStage", level.ToString());
+        //PlayerPrefs.SetString("StoredStage", level.ToString());
 
 
         audiosource = transform.GetComponent<AudioSource>();

@@ -44,8 +44,13 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1024
   defaultScreenHeight: 768
+<<<<<<< HEAD
   defaultScreenWidthWeb: 8192
   defaultScreenHeightWeb: 1024
+=======
+  defaultScreenWidthWeb: 20000
+  defaultScreenHeightWeb: 12000
+>>>>>>> 106e61fbc9901e20c6f05e2f7b5d519090c2c52d
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   m_MTRendering: 1
@@ -70,7 +75,7 @@ PlayerSettings:
   androidBlitType: 0
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 1
+  runInBackground: 0
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -574,7 +579,11 @@ PlayerSettings:
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
+<<<<<<< HEAD
+  webGLDecompressionFallback: 0
+=======
   webGLDecompressionFallback: 1
+>>>>>>> 60f8430dcd9ac87f868378308a42102f1a76f35f
   scriptingDefineSymbols:
     1: UNITY_POST_PROCESSING_STACK_V2;CROSS_PLATFORM_INPUT
     4: CROSS_PLATFORM_INPUT;MOBILE_INPUT
