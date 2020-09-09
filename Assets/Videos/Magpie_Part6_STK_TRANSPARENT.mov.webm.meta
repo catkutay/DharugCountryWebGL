@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 029bca769bd5745bb83ba8031e936d04
+guid: 09a764443d37b4d5e9d647bb4b7c686f
 VideoClipImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -21,7 +21,7 @@ VideoClipImporter:
       customWidth: 10576
       customHeight: 1200
       bitrateMode: 2
-      spatialQuality: 1
+      spatialQuality: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 

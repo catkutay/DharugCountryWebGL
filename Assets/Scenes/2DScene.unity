@@ -43,7 +43,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 11
+  serializedVersion: 12
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -99,7 +99,8 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 5ec872ef4fbb13f4592ecc9e1ff1cbe1,
     type: 2}
-  m_UseShadowmask: 1
+  m_LightingSettings: {fileID: 4890085278179872738, guid: cf25d9ad22b7b447db568a0cb2f6d8b9,
+    type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -119,9 +120,45 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &904243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 904244}
+  m_Layer: 0
+  m_Name: Figures
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &904244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904243}
+  m_LocalRotation: {x: -0, y: 0.010414033, z: -0, w: 0.9999458}
+  m_LocalPosition: {x: -0.67781353, y: 4.5949993, z: -0.3435259}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 229891041}
+  - {fileID: 713907675}
+  - {fileID: 1061826966}
+  - {fileID: 1194618986}
+  m_Father: {fileID: 555177732}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &19469075
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +303,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -344,6 +382,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!224 &31361730
 RectTransform:
   m_ObjectHideFlags: 0
@@ -377,11 +416,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
+  change: 0
   play: 0
   next: 0
   Fileno: 0
-  figures: {fileID: 713907674}
+  storedFileno: 0
+  figure: {fileID: 2002289852}
+  figures: {fileID: 904243}
   listAudio:
   - {fileID: 8300000, guid: 2938eb8e4a9d4b84e882e78077053d6e, type: 3}
   - {fileID: 8300000, guid: d691c27cf0d8f465c95b9ad1b0a5bd33, type: 3}
@@ -425,7 +466,7 @@ MonoBehaviour:
   - Kangaroo_Part6_PAC_TRANSPARENT.mov.webm
   - Kangaroo_Part7_ENDLOOP_TRANSPARENT.mov.webm
   parentMesh: {fileID: 45813198}
-  location: DA
+  location: WebGL
 --- !u!82 &31361732
 AudioSource:
   m_ObjectHideFlags: 0
@@ -438,7 +479,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243885118847857300, guid: ffd966abd97eb4f6e8872264ebf7fe02,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -728,6 +769,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -752,6 +794,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &45813199
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -908,38 +951,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &89957097
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 89957098}
-  m_Layer: 0
-  m_Name: Figures
-  m_TagString: Figures
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &89957098
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 89957097}
-  m_LocalRotation: {x: 0, y: -0.043619405, z: 0, w: 0.9990483}
-  m_LocalPosition: {x: 0, y: -0.3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1194618986}
-  - {fileID: 1061826966}
-  m_Father: {fileID: 555177732}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: -5, z: 0}
 --- !u!1 &132863427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1016,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1029,6 +1041,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &132863431
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1113,6 +1126,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1137,6 +1151,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &157950888
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1277,7 +1292,7 @@ Camera:
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
-  m_projectionMatrixMode: 2
+  m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 100}
@@ -1291,7 +1306,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 1000
-  field of view: 118.07249
+  field of view: 50
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -1316,13 +1331,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 205380568}
-  m_LocalRotation: {x: -0, y: -0.28105578, z: -0, w: 0.95969146}
-  m_LocalPosition: {x: 0, y: 2.99, z: 0}
+  m_LocalRotation: {x: -0, y: 0.1884906, z: -0, w: 0.98207504}
+  m_LocalPosition: {x: 0, y: 2.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: -32.646, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 21.729, z: 0}
 --- !u!45 &205380573
 Skybox:
   m_ObjectHideFlags: 0
@@ -1384,6 +1399,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1423,7 +1439,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &229891041
 Transform:
   m_ObjectHideFlags: 0
@@ -1431,14 +1447,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229891040}
-  m_LocalRotation: {x: -0.21850793, y: -0.6724986, z: 0.6724986, w: -0.21850793}
-  m_LocalPosition: {x: 1.6, y: -1, z: 0.023532081}
-  m_LocalScale: {x: 1199.9988, y: 1199.9993, z: -599.9998}
+  m_LocalRotation: {x: -0.25451806, y: -0.65971255, z: 0.65971255, w: -0.25451806}
+  m_LocalPosition: {x: 0.41306844, y: -5.0949993, z: 0.7122834}
+  m_LocalScale: {x: 1199.9988, y: 1199.9991, z: -599.9997}
   m_Children:
   - {fileID: 2002289851}
-  m_Father: {fileID: 555177732}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 90, y: -24, z: 192}
+  m_Father: {fileID: 904244}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 221}
 --- !u!23 &229891042
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1454,6 +1470,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1478,6 +1495,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &229891043
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1549,9 +1567,11 @@ MonoBehaviour:
   text: {fileID: 1437374407}
   level: 0
   change: 1
-  play: 0
+  play: 1
   next: 0
   Fileno: 0
+  storedFileno: 0
+  figure: {fileID: 31361731}
   figures: {fileID: 45813196}
   listAudio:
   - {fileID: 8300000, guid: a654a8bddaa284de68f46110abf16535, type: 3}
@@ -1581,7 +1601,7 @@ MonoBehaviour:
   - {fileID: 32900000, guid: 34ec896a1690049579c20df07fddeb66, type: 3}
   - {fileID: 32900000, guid: 22971ae75ae874d0cb04e7bd182594b5, type: 3}
   - {fileID: 32900000, guid: 349e2f9bc51d546dfad67a25cd231d18, type: 3}
-  - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
+  - {fileID: 32900000, guid: 029bca769bd5745bb83ba8031e936d04, type: 3}
   - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
   listOfVideos:
   - Magpie_Part1_ENTER_TRANSPARENT.mov.webm
@@ -1737,6 +1757,7 @@ VideoPlayer:
   m_Looping: 0
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &258318679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1793,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1796,6 +1818,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &258318681
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -1820,6 +1843,102 @@ Transform:
   m_Father: {fileID: 555177732}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+--- !u!1 &280595514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 280595518}
+  - component: {fileID: 280595517}
+  - component: {fileID: 280595516}
+  - component: {fileID: 280595515}
+  m_Layer: 0
+  m_Name: Plane
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!64 &280595515
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280595514}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &280595516
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280595514}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 52b7d70b1de7c4ce09662b77c14d9fda, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &280595517
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280595514}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &280595518
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280595514}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.63051, y: -1.69, z: -0.52757}
+  m_LocalScale: {x: 5.310566, y: 0.84540987, z: 4.60816}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &286723403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1955,6 +2074,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -1979,6 +2099,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &331755223
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2333,7 +2454,9 @@ MonoBehaviour:
   play: 0
   next: 0
   Fileno: 0
-  figures: {fileID: 89957097}
+  storedFileno: 0
+  figure: {fileID: 0}
+  figures: {fileID: 0}
   listAudio:
   - {fileID: 0}
   dharug:
@@ -2347,7 +2470,7 @@ MonoBehaviour:
   listOfVideos:
   - Boy_Part1_LOOP_TRANSPARENT.mov.webm
   parentMesh: {fileID: 1194618987}
-  location: DA
+  location: WebGL
 --- !u!64 &418855623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2374,7 +2497,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243262415622919472, guid: ffd966abd97eb4f6e8872264ebf7fe02,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2493,6 +2616,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &458180427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2634,9 +2758,7 @@ Transform:
   - {fileID: 77195971}
   - {fileID: 2004258564}
   - {fileID: 45813197}
-  - {fileID: 713907675}
-  - {fileID: 229891041}
-  - {fileID: 89957098}
+  - {fileID: 904244}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -1.1930001, z: 0}
@@ -2788,6 +2910,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3119,7 +3242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &713907675
 Transform:
   m_ObjectHideFlags: 0
@@ -3127,14 +3250,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713907674}
-  m_LocalRotation: {x: -0.12309982, y: -0.698415, z: 0.6922194, w: -0.13377294}
-  m_LocalPosition: {x: 0.20744878, y: -0.01999998, z: -0.7648302}
-  m_LocalScale: {x: 1199.9978, y: 1199.9991, z: -599.99945}
+  m_LocalRotation: {x: -0.28634164, y: -0.64810646, z: 0.64054286, w: -0.29609323}
+  m_LocalPosition: {x: 3.6436684, y: -4.874999, z: 2.072334}
+  m_LocalScale: {x: 1199.9985, y: 1199.9998, z: -599.9997}
   m_Children:
   - {fileID: 1557793969}
-  m_Father: {fileID: 555177732}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 91, y: -70.331, z: 130.6}
+  m_Father: {fileID: 904244}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 91, y: -70.33, z: 152.12}
 --- !u!23 &713907676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3150,6 +3273,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3174,6 +3298,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &713907677
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3674,6 +3799,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3698,6 +3824,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &944080408
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3772,6 +3899,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3829,6 +3957,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3853,6 +3982,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1060462346
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3887,15 +4017,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061826965}
-  m_LocalRotation: {x: 0.078978404, y: -0.7025581, z: 0.70280343, w: 0.07900598}
-  m_LocalPosition: {x: -0.009999976, y: -0.59, z: -0.8899998}
-  m_LocalScale: {x: 1200.0007, y: 1200.0002, z: -599.99994}
+  m_LocalRotation: {x: -0.03577985, y: -0.6421857, z: 0.76519984, w: -0.028047571}
+  m_LocalPosition: {x: 0.40301588, y: -5.4949994, z: 0.6906536}
+  m_LocalScale: {x: 1200.0001, y: 1199.9995, z: -599.9998}
   m_Children:
   - {fileID: 1393665966}
   - {fileID: 1816065401}
-  m_Father: {fileID: 89957098}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 89.98, y: 0, z: 167.172}
+  m_Father: {fileID: 904244}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 80, y: 0, z: 179}
 --- !u!23 &1061826967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3911,6 +4041,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3935,6 +4066,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1061826968
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3992,6 +4124,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4016,6 +4149,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1081556743
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4165,6 +4299,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4189,6 +4324,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1116723751
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4274,6 +4410,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4298,6 +4435,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1142893546
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4347,15 +4485,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194618985}
-  m_LocalRotation: {x: 0.05125662, y: -0.7050363, z: 0.7054549, w: 0.051284116}
-  m_LocalPosition: {x: 0.1500004, y: 0.5, z: 0}
-  m_LocalScale: {x: 1200.0005, y: 1199.999, z: -600.00006}
+  m_LocalRotation: {x: 0.010603619, y: -0.7068188, z: 0.70723486, w: 0.010655141}
+  m_LocalPosition: {x: 0.8196369, y: -4.5749993, z: 0.3737509}
+  m_LocalScale: {x: 1200.0007, y: 1199.9991, z: -600.0001}
   m_Children:
   - {fileID: 781985179}
   - {fileID: 418855621}
-  m_Father: {fileID: 89957098}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 89.966, y: 0.4, z: 172.084}
+  m_Father: {fileID: 904244}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 89.966, y: 0, z: 172.084}
 --- !u!23 &1194618987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4371,6 +4509,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4395,6 +4534,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1194618988
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4537,6 +4677,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4561,6 +4702,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1331611405
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4618,10 +4760,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
+  change: 0
   play: 0
   next: 0
   Fileno: 0
+  storedFileno: 0
+  figure: {fileID: 0}
   figures: {fileID: 0}
   listAudio:
   - {fileID: 0}
@@ -4651,7 +4795,7 @@ MonoBehaviour:
   - Woman_Part2_TurnToRiver_TRANSPARENT.mov.webm
   - Woman_Part1_LOOP_TRANSPARENT.mov.webm
   parentMesh: {fileID: 1061826967}
-  location: DA
+  location: Webgl
 --- !u!82 &1393665964
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4783,6 +4927,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!4 &1393665966
 Transform:
   m_ObjectHideFlags: 0
@@ -4832,6 +4977,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4856,6 +5002,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1433611287
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -4915,9 +5062,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 300, y: 40}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -150.00002, y: 50}
+  m_SizeDelta: {x: 300, y: 20}
+  m_Pivot: {x: 0, y: 0}
 --- !u!65 &1437374406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4946,13 +5093,14 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 10
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -5007,6 +5155,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5031,6 +5180,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1483039440
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5103,11 +5253,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
+  change: 0
   play: 0
   next: 0
   Fileno: 0
-  figures: {fileID: 229891040}
+  storedFileno: 0
+  figure: {fileID: 1393665963}
+  figures: {fileID: 0}
   listAudio:
   - {fileID: 0}
   - {fileID: 8300000, guid: b795c631a6ab14e0d8d08966e3c30f1e, type: 3}
@@ -5136,7 +5288,7 @@ MonoBehaviour:
   - SittingMan_Part3_IAN_TRANSPARENT.mov.webm
   - SittingMan_Part1_LOOP_TRANSPARENT.mov.webm
   parentMesh: {fileID: 713907676}
-  location: DA
+  location: WebGL
 --- !u!64 &1557793971
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5163,7 +5315,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243215797622351168, guid: ffd966abd97eb4f6e8872264ebf7fe02,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -5282,6 +5434,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1001 &1559688658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5459,6 +5612,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5630,6 +5784,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5654,6 +5809,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1713028934
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -5860,6 +6016,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5884,6 +6041,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1775017282
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6322,6 +6480,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!4 &1922094927
 Transform:
   m_ObjectHideFlags: 0
@@ -6471,11 +6630,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
+  change: 0
   play: 0
   next: 0
   Fileno: 0
-  figures: {fileID: 89957097}
+  storedFileno: 0
+  figure: {fileID: 1557793970}
+  figures: {fileID: 0}
   listAudio:
   - {fileID: 0}
   - {fileID: 8300000, guid: 2471d624b7cee46d697dfed4d7be4ad4, type: 3}
@@ -6513,13 +6674,13 @@ MonoBehaviour:
   listOfVideos:
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part2_IGTSY_TRANSPARENT.mov.webm
-  - StandingMan_Part2_IGTSY_TRANSPARENT.mov.webm
+  - StandingMan_Part3_TurnToRiver_TRANSPARENT.mov.webm
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   - StandingMan_Part3_TurnToRiver_TRANSPARENT.mov.webm
   - StandingMan_Part1_1stLOOP_TRANSPARENT.mov.webm
   parentMesh: {fileID: 229891042}
-  location: DA
+  location: WebGL
 --- !u!64 &2002289853
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6546,7 +6707,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243361780485304794, guid: ffd966abd97eb4f6e8872264ebf7fe02,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -6665,6 +6826,7 @@ VideoPlayer:
   m_Looping: 1
   m_WaitForFirstFrame: 0
   m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &2004258563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6714,6 +6876,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -6738,6 +6901,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2004258566
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6944,6 +7108,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

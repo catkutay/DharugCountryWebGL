@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Video;
+using UnityEngine.SceneManagement;
 public class VideoSorter : MonoBehaviour
 {
     public enum stage { Start, Dharug, English, None };
     public Text text;
     public stage level = stage.Start;
     public bool change, play, next;
-    public int Fileno = 0;
+    public int Fileno = 0, storedFileno=0;
+    public VideoSorter figure;
     public GameObject figures;
     //public GameObject complete;
     public AudioClip[] listAudio;
@@ -73,13 +75,13 @@ else
        url = System.IO.Path.Combine(Application.streamingAssetsPath, folder, listOfVideos[0]);
 
       videoplayer.url = url;
-      videoplayer.Prepare();
+      
 
 #else
         videoplayer.clip = listVideo[Fileno];
-        videoplayer.Prepare();
+        
 #endif
-
+    videoplayer.Prepare();
         play = true;
         next = true;
 
@@ -95,7 +97,7 @@ else
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
-            Fileno -= 1;
+            Fileno =storedFileno-1;
             next = true;
         }
         StartCoroutine(RunVideo());
@@ -104,62 +106,38 @@ else
 
     IEnumerator RunVideo()
     {
-        //  Debug.Log(name+ play+ change);
-        //Debug.Log(Camera.main.transform.eulerAngles);
+        
         //activate next speaker
-       
+            storedFileno=Fileno;
             if (change & name == "Magpie" & Fileno == 4)
             {
-
                 // figures = GameObject.FindGameObjectWithTag("Figures");
-                figures.SetActive(true);
+                if (figures)figures.SetActive(true);
+                if (figure)figure.next=true;
             }
             if (change & name == "Kangaroo" & Fileno == 4)
             {
-
                 // figures = GameObject.FindGameObjectWithTag("Figures");
-                figures.SetActive(true);
+                 if (figures)figures.SetActive(true);
+                if (figure) figure.next=true;
+               
             }
-            if (name == "Man Sitting" | name=="Man Standing")
-            {
-                yield return new WaitForSeconds(7f);
-                figures.SetActive(true);
-
-            }
-
-        //    //Debug.Log(Camera.main.transform.eulerAngles);
-        //    // Move to next speaker
-        //    if (name == "Magpie" & Fileno >= 0 & Fileno < 3)
-        //    {
-
-        //        if (Camera.main.transform.eulerAngles.y < 0 | Camera.main.transform.eulerAngles.y > 290)
-
-        //            Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
-
-        //    }
-        //    if (name == "Magpie" & Fileno >= 3 & Fileno < listVideo.Length - 1)
-        //    {
-
-        //        if (Camera.main.transform.eulerAngles.y < 30 | Camera.main.transform.eulerAngles.y > 290)
-
-        //            Camera.main.transform.Rotate(Vector3.up, 5 * Time.deltaTime);
-
-        //    }
-        //    if (name == "Kangaroo" & Fileno > 4)
-        //    {
-
-
-        //        if (Camera.main.transform.eulerAngles.y < 35 | Camera.main.transform.eulerAngles.y > 298)
-
-        //            Camera.main.transform.Rotate(Vector3.up, -5 * Time.deltaTime);
-
-
-        //    }
+           if (name == "Kangaroo" & Fileno > 4)
+           {
+               if (Camera.main.transform.eulerAngles.y < 35 | Camera.main.transform.eulerAngles.y > 298)
+                   Camera.main.transform.Rotate(Vector3.up, -5 * Time.deltaTime);
+           }
         //
 
         //stop looping for talking videos
-        if (0 < Fileno | Fileno < listVideo.Length - 1) videoplayer.isLooping = false;
-        //else videoplayer.isLooping = true;
+        if (Fileno == listVideo.Length - 1){
+                    //final script - generalise FIXME
+                    //text.text = translations[Fileno];
+
+                    videoplayer.isLooping = true;
+                   // level = stage.English;
+        } else videoplayer.isLooping = false;
+       
         //move to next video segment
         if (Fileno < listVideo.Length)
         {
@@ -187,30 +165,21 @@ else
                 videoplayer.clip = listVideo[Fileno];   
        
 #endif
-
-                //play background sounds;
-                //if (Fileno==0) 
-				//if (name=="Magpie"& Fileno == 1) yield return new WaitForSeconds(1f);
-				audiosource.Play();
-                if (Fileno == listVideo.Length - 1)
-                {
-                    //final script - generalise FIXME
-                    text.text = translations[Fileno];
-
-                    videoplayer.isLooping = true;
-                    level = stage.English;
-                }
-                    videoplayer.Play();
+                videoplayer.Prepare();
+                yield return new WaitForSeconds(2f);
+               
+                videoplayer.Play();
+                // Missing sound with video
+				if ((name=="Man Standing" & Fileno >2)|Fileno==0) audiosource.Play();
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
-                
                
                 //wait for vidoe to load before enabling mesh
-                if (name =="Magpie" | name =="Kangaroo")
-                    yield return new WaitForSeconds(1.5f);
-                else if (name == "Woman")
+                //if (name =="Magpie" )//| name =="Kangaroo"
+                 yield return new WaitForSeconds(5f);
+               /*  else if (name == "Woman")
                     yield return new WaitForSeconds(4f);
-                else yield return new WaitForSeconds(2f);
-
+                else yield return new WaitForSeconds(2f);*/ 
+                
                 if (parentMesh & videoplayer.isPlaying) parentMesh.enabled = true;
 
                 if (level == stage.Dharug) text.text = dharug[Fileno];
@@ -218,55 +187,66 @@ else
                 else text.text = "";
                 //add end loop audio
                 //put on loop
-                if (name == "Man Standing" | name == "Woman" | Fileno == listVideo.Length - 1)
-                {
-
-                    audiosource.Play();
-                    
-                    yield return new WaitUntil(() => !audiosource.isPlaying);
-                }
+                
                 if (name == "Man Standing" & (Fileno == 1 | Fileno == 2))
                 {
                     play = false;
                     Follow1.play = true;
-                    Follow1.Fileno += 1;
+                    //pass speech
+                    Follow1.Fileno = Fileno;
                 }
                 if (name == "Man Sitting" & (Fileno == 1 | Fileno == 2))
                 {
 
-                    play = false;
+                    if (Fileno==1)play = false;//else loop next round
+                    
                     Follow1.play = true;
-                    Follow1.Fileno += 1;
+                    //pass speech
+                    Follow1.Fileno = Fileno;
+                    
                 }
                 if (name == "Man Standing" & (Fileno == 3 | Fileno == 4))
                 {
-                    play = false;
+                    if (Fileno==3)play = false; //else loop next round
                     Follow2.play = true;
-                    Follow2.Fileno += 1;
-                    figures.SetActive(true);
+                    //pass speech
+                    Follow2.Fileno = Fileno -2;
+                    //allow woman to change
+                    figure.next=true;
+                    
                 }
                 if (name == "Woman" & (Fileno == 1 | Fileno == 2))
                 {
-                    play = false;
+                    if (Fileno==1)play = false; //else loop next round
                     Follow1.play = true;
-                    Follow1.Fileno += 1;
+                    //pass speech
+                    Follow1.Fileno =Fileno+2;
                 }
-                //wait after first language spoken
-                if (Fileno > 0)
+                //wait after first language spoken unless about to enter last loop
+                if (Fileno > 0 & Fileno<listVideo.Length-2)
                 {
                     next = false;
                    
                 }
         //turn off previous
-
+        
+                
                     Fileno += 1;
-
-                //not working
+                    storedFileno=Fileno;
+                    //not working
                 //yield return new WaitForSeconds(1f);
                 videoplayer.loopPointReached += CheckOver;
+                
+                if (name == "Man Standing" & Fileno ==listVideo.Length)
+                {
+                    PlayerPrefs.SetString("StoredStage", level.ToString());
+                    SceneManager.LoadScene("(Scene2)2DWorldView");
+                }
+                
                 //pdsend.sendMessagePD("3 1");
-
+                yield return new WaitUntil(() => !audiosource.isPlaying);
                 yield return new WaitUntil(() => !videoplayer.isPlaying);
+                
               if (location!="DA")  text.text = "Press C to continue or R to repeat phrase";
                 //  yield return new WaitForSeconds((float)videoplayer.length);
 

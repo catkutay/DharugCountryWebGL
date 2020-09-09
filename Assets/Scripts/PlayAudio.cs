@@ -44,7 +44,7 @@ public class PlayAudio : MonoBehaviour
             level = stage.Start;
         }
         //not sure why need this
-        if (level == stage.English) level = stage.Start;
+      
 
         if(level == stage.English) level = stage.Start;
         if (level == stage.Dharug) level = stage.English;
@@ -70,7 +70,7 @@ public class PlayAudio : MonoBehaviour
         {
             next = true;
             //revert to saved
-            level = (stage)System.Enum.Parse(typeof(stage), PlayerPrefs.GetString("StoredStage"));
+           // level = (stage)System.Enum.Parse(typeof(stage), PlayerPrefs.GetString("StoredStage"));
         }
         else if (Input.GetKeyDown(KeyCode.R))
         {
@@ -101,9 +101,17 @@ public class PlayAudio : MonoBehaviour
                 audiosource.clip = listAudio[Fileno];
                 //  Debug.Log(audiosource.clip.length);
 
-                audiosource.PlayDelayed(1f);
+                
+               
+
+                if (level == stage.Dharug) text.text = dharug[Fileno];
+                else if (level == stage.English) text.text = translations[Fileno];
+                else text.text = "";
                 Fileno += 1;
 				storeFileno=Fileno;
+
+                audiosource.PlayDelayed(1f);
+                
                 //               pdsend.sendMessagePD("2 2");
 
                 //           pdsend.sendMessagePD("2 1");
@@ -111,12 +119,8 @@ public class PlayAudio : MonoBehaviour
                 yield return new WaitForSeconds(1f);
 
 
-                if (level == stage.Dharug) text.text = dharug[Fileno-1];
-                else if (level == stage.English) text.text = translations[Fileno-1];
-                else text.text = "";
-
-
                 next = false;
+                //added one to fileno
                 if (Fileno == 7)
                 {
 
