@@ -109,17 +109,17 @@ else
         
         //activate next speaker
             storedFileno=Fileno;
-            if (change & name == "Magpie" & Fileno == 4)
+            if (name == "Magpie" & Fileno == 4)
             {
                 // figures = GameObject.FindGameObjectWithTag("Figures");
                 if (figures)figures.SetActive(true);
-                if (figure)figure.next=true;
+                if (figure)figure.change=true;
             }
-            if (change & name == "Kangaroo" & Fileno == 4)
+            if (name == "Kangaroo" & Fileno == 4)
             {
                 // figures = GameObject.FindGameObjectWithTag("Figures");
                  if (figures)figures.SetActive(true);
-                if (figure) figure.next=true;
+                if (figure) figure.change=true;
                
             }
            if (name == "Kangaroo" & Fileno > 4)
@@ -165,26 +165,30 @@ else
                 videoplayer.clip = listVideo[Fileno];   
        
 #endif
-                videoplayer.Prepare();
-                yield return new WaitForSeconds(2f);
+               // videoplayer.Prepare();
+                //yield return new WaitForSeconds(2f);
                
                 videoplayer.Play();
                 // Missing sound with video
 				if ((name=="Man Standing" & Fileno >2)|Fileno==0) audiosource.Play();
+                
+                if (level == stage.Dharug) text.text = dharug[Fileno];
+                else if (level == stage.English) text.text = translations[Fileno];
+                else text.text = "";
+
                 parentMesh = this.GetComponentInParent(typeof(MeshRenderer)) as MeshRenderer;
                
                 //wait for vidoe to load before enabling mesh
-                //if (name =="Magpie" )//| name =="Kangaroo"
-                 yield return new WaitForSeconds(5f);
+                
+                if (name=="Magpie") yield return new WaitForSeconds(2f);
+                else yield return new WaitForSeconds(5f);
                /*  else if (name == "Woman")
                     yield return new WaitForSeconds(4f);
                 else yield return new WaitForSeconds(2f);*/ 
                 
                 if (parentMesh & videoplayer.isPlaying) parentMesh.enabled = true;
 
-                if (level == stage.Dharug) text.text = dharug[Fileno];
-                else if (level == stage.English) text.text = translations[Fileno];
-                else text.text = "";
+               
                 //add end loop audio
                 //put on loop
                 
