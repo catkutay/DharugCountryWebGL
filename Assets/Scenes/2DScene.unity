@@ -416,9 +416,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
+  play: 1
+  next: 1
   change: 1
-  play: 0
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 2002289852}
@@ -1447,14 +1447,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229891040}
-  m_LocalRotation: {x: -0.21850793, y: -0.6724986, z: 0.6724986, w: -0.21850793}
-  m_LocalPosition: {x: 1.6, y: -1, z: 0.02}
+  m_LocalRotation: {x: -0.25451806, y: -0.65971255, z: 0.65971255, w: -0.25451806}
+  m_LocalPosition: {x: 0.41306844, y: -5.0949993, z: 0.7122834}
   m_LocalScale: {x: 1199.9988, y: 1199.9991, z: -599.9997}
   m_Children:
   - {fileID: 2002289851}
   m_Father: {fileID: 904244}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: -24, z: 192}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 221}
 --- !u!23 &229891042
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1566,9 +1566,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
   play: 1
-  next: 1
+  next: 0
+  change: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 31361731}
@@ -2354,9 +2354,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
   play: 1
   next: 1
+  change: 1
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 0}
@@ -3058,14 +3058,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 713907674}
-  m_LocalRotation: {x: -0.1230938, y: -0.6984162, z: 0.6922205, w: -0.13376687}
-  m_LocalPosition: {x: 0.2074, y: -0.02, z: -0.764}
+  m_LocalRotation: {x: -0.28634164, y: -0.64810646, z: 0.64054286, w: -0.29609323}
+  m_LocalPosition: {x: 3.6436684, y: -4.874999, z: 2.072334}
   m_LocalScale: {x: 1199.9985, y: 1199.9998, z: -599.9997}
   m_Children:
   - {fileID: 1557793969}
   m_Father: {fileID: 904244}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 91, y: -70.33, z: 130.6}
+  m_LocalEulerAnglesHint: {x: 91, y: -70.33, z: 152.12}
 --- !u!23 &713907676
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3823,15 +3823,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1061826965}
-  m_LocalRotation: {x: 0.07900443, y: -0.7026794, z: 0.7026794, w: 0.07900443}
-  m_LocalPosition: {x: -0.009, y: -0.59, z: -0.889}
+  m_LocalRotation: {x: -0.03577985, y: -0.6421857, z: 0.76519984, w: -0.028047571}
+  m_LocalPosition: {x: 0.40301588, y: -5.4949994, z: 0.6906536}
   m_LocalScale: {x: 1200.0001, y: 1199.9995, z: -599.9998}
   m_Children:
   - {fileID: 1393665966}
   - {fileID: 1816065401}
   m_Father: {fileID: 904244}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 167.17}
+  m_LocalEulerAnglesHint: {x: 80, y: 0, z: 179}
 --- !u!23 &1061826967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4291,15 +4291,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194618985}
-  m_LocalRotation: {x: 0.051278748, y: -0.7049975, z: 0.7054901, w: 0.051311128}
-  m_LocalPosition: {x: 0.15, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0.010603619, y: -0.7068188, z: 0.70723486, w: 0.010655141}
+  m_LocalPosition: {x: 0.8196369, y: -4.5749993, z: 0.3737509}
   m_LocalScale: {x: 1200.0007, y: 1199.9991, z: -600.0001}
   m_Children:
   - {fileID: 781985179}
   - {fileID: 418855621}
   m_Father: {fileID: 904244}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 89.96, y: 0.4, z: 172.08}
+  m_LocalEulerAnglesHint: {x: 89.966, y: 0, z: 172.084}
 --- !u!23 &1194618987
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4566,9 +4566,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
+  play: 0
+  next: 1
   change: 1
-  play: 1
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 0}
@@ -5059,9 +5059,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
+  play: 0
+  next: 1
   change: 1
-  play: 1
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 1393665963}
@@ -6436,9 +6436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
+  play: 0
+  next: 1
   change: 1
-  play: 1
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 1557793970}
