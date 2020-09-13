@@ -5318,8 +5318,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.9622642, g: 0.95855045, b: 0.75800997, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.9433962, g: 0.9350896, b: 0.91224635, a: 1}
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -5375,13 +5375,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 215666127}
-  m_LocalRotation: {x: 0.40821797, y: -0.23456974, z: 0.10938168, w: 0.8754261}
-  m_LocalPosition: {x: 2733.3499, y: 473.30002, z: 1068.5}
+  m_LocalRotation: {x: 0.621777, y: -0.19806616, z: 0.16660467, w: 0.73919296}
+  m_LocalPosition: {x: 2736.44, y: 480.67, z: 1063.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 80.138, y: -30, z: 0}
 --- !u!1 &298223035 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6386562028718295827, guid: 01577acdeff718741a769ed886571ade,
@@ -22427,8 +22427,8 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: f4ab860babf60274ebeb373f396de800, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.5
-  priority: 0
+  weight: 0.71
+  priority: 10
 --- !u!1 &1897227538
 GameObject:
   m_ObjectHideFlags: 0

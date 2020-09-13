@@ -416,9 +416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 0
-  play: 0
-  next: 0
+  play: 1
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 2002289852}
@@ -1566,9 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 1
   play: 1
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 31361731}
@@ -1597,12 +1593,12 @@ MonoBehaviour:
   Follow1: {fileID: 0}
   Follow2: {fileID: 0}
   listVideo:
-  - {fileID: 32900000, guid: d39fcc1c83e844f21a2b2dc3e3b5557f, type: 3}
-  - {fileID: 32900000, guid: 34ec896a1690049579c20df07fddeb66, type: 3}
-  - {fileID: 32900000, guid: 22971ae75ae874d0cb04e7bd182594b5, type: 3}
-  - {fileID: 32900000, guid: 349e2f9bc51d546dfad67a25cd231d18, type: 3}
-  - {fileID: 32900000, guid: 029bca769bd5745bb83ba8031e936d04, type: 3}
-  - {fileID: 32900000, guid: 9d89154c7b7704a9f8208560d57243bf, type: 3}
+  - {fileID: 32900000, guid: 77f74ec11d35f4a9ca23b6b89c034fef, type: 3}
+  - {fileID: 32900000, guid: b2deb30425fcc4f458c9a2b9ea5ef8c3, type: 3}
+  - {fileID: 32900000, guid: 38ad563e2a60f480da8f7a947f2c19a5, type: 3}
+  - {fileID: 32900000, guid: 704a8bfc710db463caaf78c39e407410, type: 3}
+  - {fileID: 32900000, guid: 3f2a31bd07dbc43d4ac23786d23a9356, type: 3}
+  - {fileID: 32900000, guid: 991119d30030a4b5caad9b640e74ab9f, type: 3}
   listOfVideos:
   - Magpie_Part1_ENTER_TRANSPARENT.mov.webm
   - Magpie_Part3_TPCA_TRANSPARENT.mov.webm
@@ -2306,102 +2302,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9de735e99afa484fad9b5013c7d4f73, type: 3}
---- !u!1 &416679696
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 416679697}
-  - component: {fileID: 416679700}
-  - component: {fileID: 416679699}
-  - component: {fileID: 416679698}
-  m_Layer: 0
-  m_Name: Plane
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &416679697
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416679696}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.957234, y: 3, z: -2.5636158}
-  m_LocalScale: {x: 8, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 876629388}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &416679698
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416679696}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &416679699
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416679696}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 16a6c6f9a83244385975467e72f93bd4, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &416679700
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 416679696}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &418855620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2450,9 +2350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 0
-  play: 0
-  next: 0
+  play: 1
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 0}
@@ -2762,102 +2660,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -1.1930001, z: 0}
---- !u!1 &587478994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 587478995}
-  - component: {fileID: 587478998}
-  - component: {fileID: 587478997}
-  - component: {fileID: 587478996}
-  m_Layer: 0
-  m_Name: Plane (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &587478995
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587478994}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.957234, y: -4.1435738, z: -2.6}
-  m_LocalScale: {x: 8, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 876629388}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &587478996
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587478994}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &587478997
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587478994}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 7d80a112a7e6f4af59e77c9fb9558a80, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &587478998
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 587478994}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &596919110
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,8 +3412,6 @@ Transform:
   m_Children:
   - {fileID: 1979967867}
   - {fileID: 1858880170}
-  - {fileID: 416679697}
-  - {fileID: 587478995}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4760,9 +4560,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 0
   play: 0
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 0}
@@ -5253,9 +5051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 0
   play: 0
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 1393665963}
@@ -6630,9 +6426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 1437374407}
   level: 0
-  change: 0
   play: 0
-  next: 0
   Fileno: 0
   storedFileno: 0
   figure: {fileID: 1557793970}
